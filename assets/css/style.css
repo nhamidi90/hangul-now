@@ -1,0 +1,29 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.index-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.start {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    font-size: 40px;
+    width: 200px;
+}
