@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600&family=Single+Day&display=swap');
 
 * {
     margin: 0;
@@ -13,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .index-container {
@@ -25,9 +26,11 @@
 
 .index-left {
     font-size: 50px;
+    font-family: "single day";
     text-align: right;
     padding-right: 50px;
     padding-left: 50px;
+    padding-top: 30px;
 }
 
 .circle {
@@ -36,6 +39,7 @@
     width: 100px;
     height: 100px;
     position: absolute;
+    box-shadow: 10px 5px 5px #999;
 }
 
 .start {
@@ -43,5 +47,12 @@
     top: 20px;
     left: 50%;
     font-size: 40px;
-    width: 150px;
+    width: 200px;
+    font-family: "rubik";
+    color: rgb(174, 245, 221);
+    -webkit-text-stroke: 1px black;
+}
+
+img {
+    width: 200px;
 }
