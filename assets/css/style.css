@@ -5,11 +5,29 @@
     box-sizing: border-box;
 }
 
+/* ----------------Index Page */
+
+
+.index-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 200px;
+}
+
 .index-container {
     display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+    max-width: 80rem;
+    align-items: center;
+    margin: auto;
+}
+
+.index-left {
+    font-size: 50px;
+    text-align: right;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .circle {
@@ -25,5 +43,5 @@
     top: 20px;
     left: 50%;
     font-size: 40px;
-    width: 200px;
+    width: 150px;
 }
