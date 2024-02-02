@@ -14,6 +14,13 @@ body{
     flex-direction: column;
 }
 
+.container {
+    display: flex;
+    max-width: 80rem;
+    align-items: center;
+    margin: auto;
+}
+
 /* ----------------Index Page */
 
 .index-image {
@@ -24,12 +31,6 @@ body{
     margin-top: 150px;
 }
 
-.index-container {
-    display: flex;
-    max-width: 80rem;
-    align-items: center;
-    margin: auto;
-}
 
 .index-left {
     font-size: 50px;
@@ -87,6 +88,14 @@ footer {
 .footer-icons:hover {
     text-decoration: none;
     color: cadetblue;
+}
+
+
+/* ---------------- Letter */
+
+h1 {
+    text-align: center;
+    margin: 50px;
 }
 
 /* ---------------- Media Queries */
