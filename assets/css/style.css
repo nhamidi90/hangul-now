@@ -78,6 +78,10 @@ main {
 
 /* ----------------Index Page */
 
+.index-container {
+    flex-direction: row;
+}
+
 .index-image {
     width: 100%;
     display: flex;
