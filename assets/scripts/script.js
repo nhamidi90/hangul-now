@@ -49,3 +49,26 @@ let doubleConsonants = [
     {eng: 'ss', kor: 'ㅆ', audio: 'assets/audio/ss.mp3'},
     {eng: 'jj', kor: 'ㅉ', audio: 'assets/audio/jj.mp3'},
 ];
+
+
+let consonantsContainer = document.getElementById("consonants-container");
+
+let korVowels = vowels.map(vowel => vowel.kor);
+let allVowels = korVowels.length;
+
+let vowelsContainer = document.getElementById("vowels-container");
+for (let i = 0; i < allVowels; i++) {
+    let newCard = document.createElement('div');
+        newCard.innerHTML = korVowels[i];
+        newCard.classList.add("card")
+        vowelsContainer.appendChild(newCard);
+};
+
+let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
+let allCompoundVowels = korCompoundVowels.length;
+for (let i = 0; i < allCompoundVowels; i++) {
+    let newCard = document.createElement('div');
+        newCard.innerHTML = korCompoundVowels[i];
+        newCard.classList.add("card")
+        vowelsContainer.appendChild(newCard);
+};
