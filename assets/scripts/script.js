@@ -50,13 +50,17 @@ let doubleConsonants = [
     {eng: 'jj', kor: 'ㅉ', audio: 'assets/audio/jj.mp3'},
 ];
 
+//consonants
 
 let consonantsContainer = document.getElementById("consonants-container");
+
+// Vowels
 
 let korVowels = vowels.map(vowel => vowel.kor);
 let allVowels = korVowels.length;
 
 let vowelsContainer = document.getElementById("vowels-container");
+
 for (let i = 0; i < allVowels; i++) {
     let newCard = document.createElement('div');
         newCard.innerHTML = korVowels[i];
@@ -64,15 +68,42 @@ for (let i = 0; i < allVowels; i++) {
         vowelsContainer.appendChild(newCard);
 };
 
+let engVowels = vowels.map(vowel => vowel.eng);
+let allEngVowels = engVowels.length;
+
+let vowelsBackContainer = document.getElementById("vowels-back-container");
+for (let i = 0; i < allEngVowels; i++) {
+    let cardBack = document.createElement('div');
+        cardBack.innerHTML = engVowels[i];
+        cardBack.classList.add("card-back");
+        // cardBack.classList.add("hidden");
+        vowelsBackContainer.appendChild(cardBack);
+};
+
 let vowelsHeader = document.createElement('h2');
 vowelsHeader.innerHTML = "Compound Vowels"
 vowelsContainer.appendChild(vowelsHeader);
 
+//compound vowels
 let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
 let allCompoundVowels = korCompoundVowels.length;
+
+let engCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.eng);
+let allEngCompVowels = engCompoundVowels.length;
+
+let cvContainer = document.getElementById("cv-container");
 for (let i = 0; i < allCompoundVowels; i++) {
-    let newCard = document.createElement('div');
-        newCard.innerHTML = korCompoundVowels[i];
-        newCard.classList.add("card")
-        vowelsContainer.appendChild(newCard);
+    let card = document.createElement('div');
+        card.innerHTML = korCompoundVowels[i];
+        card.classList.add("card")
+        cvContainer.appendChild(card);
 };
+let cvBackContainer = document.getElementById("cv-back-container");
+for (let i = 0; i < allEngCompVowels; i++) {
+    let cardBack = document.createElement('div');
+        cardBack.innerHTML = engCompoundVowels[i];
+        cardBack.classList.add("card-back");
+        // cardBack.classList.add("hidden");
+        cvBackContainer.appendChild(cardBack);
+};
+
