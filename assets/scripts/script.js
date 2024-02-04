@@ -64,6 +64,10 @@ for (let i = 0; i < allVowels; i++) {
         vowelsContainer.appendChild(newCard);
 };
 
+let vowelsHeader = document.createElement('h2');
+vowelsHeader.innerHTML = "Compound Vowels"
+vowelsContainer.appendChild(vowelsHeader);
+
 let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
 let allCompoundVowels = korCompoundVowels.length;
 for (let i = 0; i < allCompoundVowels; i++) {
