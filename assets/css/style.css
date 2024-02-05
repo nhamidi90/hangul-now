@@ -210,6 +210,54 @@ footer {
     padding-left: 50px;
 }
 
+#consonants-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    margin: 50px auto;
+    max-width:80rem;
+    padding-left: 50px;
+}
+
+#consonants-back-container {
+    position: absolute;
+    top:-50px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    margin: 50px auto;
+    max-width:80rem;
+    padding-left: 50px;
+}
+
+#dc-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    margin: 50px auto;
+    max-width:80rem;
+    padding-left: 50px;
+}
+
+#dc-back-container {
+    position: absolute;
+    top:-50px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    margin: 50px auto;
+    max-width:80rem;
+    padding-left: 50px;
+}
+
 .hidden {
     visibility: hidden;
 }

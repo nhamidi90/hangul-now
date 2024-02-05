@@ -52,8 +52,56 @@ let doubleConsonants = [
 
 //consonants
 
-let consonantsContainer = document.getElementById("consonants-container");
 
+let korCons = consonants.map(consonant => consonant.kor);
+let allCons = korCons.length;
+
+let consContainer = document.getElementById("consonants-container");
+
+for (let i = 0; i < allCons; i++) {
+    let card = document.createElement('div');
+        card.innerHTML = korCons[i];
+        card.classList.add("card")
+        consContainer.appendChild(card);
+};
+
+let engCons = consonants.map(consonant => consonant.eng);
+let allEngCons = engCons.length;
+
+let consBackContainer = document.getElementById("consonants-back-container");
+for (let i = 0; i < allEngCons; i++) {
+    let cardBack = document.createElement('div');
+        cardBack.innerHTML = engCons[i];
+        cardBack.classList.add("card-back");
+        consBackContainer.appendChild(cardBack);
+};
+
+let consHeader = document.createElement('h2');
+consHeader.innerHTML = "Double Consonants"
+consContainer.appendChild(consHeader);
+
+let doubCons = doubleConsonants.map(doubleCon => doubleCon.kor);
+let allDoubCons = doubCons.length;
+
+let dcContainer = document.getElementById("dc-container");
+
+for (let i = 0; i < allDoubCons; i++) {
+    let card = document.createElement('div');
+        card.innerHTML = doubCons[i];
+        card.classList.add("card")
+        dcContainer.appendChild(card);
+};
+
+let engDoubCons = doubleConsonants.map(engDoubCon => engDoubCon.eng);
+let allEngDoubCons = engDoubCons.length;
+
+let dcBackContainer = document.getElementById("dc-back-container");
+for (let i = 0; i < allEngDoubCons; i++) {
+    let cardBack = document.createElement('div');
+        cardBack.innerHTML = engDoubCons[i];
+        cardBack.classList.add("card-back");
+        dcBackContainer.appendChild(cardBack);
+};
 // Vowels
 
 let korVowels = vowels.map(vowel => vowel.kor);
@@ -62,10 +110,10 @@ let allVowels = korVowels.length;
 let vowelsContainer = document.getElementById("vowels-container");
 
 for (let i = 0; i < allVowels; i++) {
-    let newCard = document.createElement('div');
-        newCard.innerHTML = korVowels[i];
-        newCard.classList.add("card")
-        vowelsContainer.appendChild(newCard);
+    let card = document.createElement('div');
+        card.innerHTML = korVowels[i];
+        card.classList.add("card")
+        vowelsContainer.appendChild(card);
 };
 
 let engVowels = vowels.map(vowel => vowel.eng);
@@ -76,9 +124,27 @@ for (let i = 0; i < allEngVowels; i++) {
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engVowels[i];
         cardBack.classList.add("card-back");
-        // cardBack.classList.add("hidden");
         vowelsBackContainer.appendChild(cardBack);
 };
+
+// function flip(event) {
+//      this.classList.toggle("hidden");
+//    };
+
+//    function unflip(event) {
+//      this.classList.toggle("hidden");
+// };
+
+   
+//    let card = document.getElementsByClassName('card');
+//       for (let i = 0 ; i < card.length; i++)  {
+//       card[i].addEventListener('click' , flip) ; 
+//    };
+   
+//    let cardBack = document.getElementsByClassName('card-back');
+//       for (let i = 0 ; i < card.length; i++)  {
+//       cardBack[i].addEventListener('click' , unflip) ; 
+//    };
 
 let vowelsHeader = document.createElement('h2');
 vowelsHeader.innerHTML = "Compound Vowels"
@@ -103,7 +169,7 @@ for (let i = 0; i < allEngCompVowels; i++) {
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engCompoundVowels[i];
         cardBack.classList.add("card-back");
-        // cardBack.classList.add("hidden");
+
         cvBackContainer.appendChild(cardBack);
 };
 
