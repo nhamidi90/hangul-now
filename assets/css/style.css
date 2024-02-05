@@ -262,6 +262,10 @@ footer {
     visibility: hidden;
 }
 
+.nodisplay {
+    display: none !important;
+}
+
 .card {
     width: 150px;
     height: 200px;
