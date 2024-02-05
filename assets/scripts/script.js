@@ -80,6 +80,8 @@ let consHeader = document.createElement('h2');
 consHeader.innerHTML = "Double Consonants"
 consContainer.appendChild(consHeader);
 
+//double consonants
+
 let doubCons = doubleConsonants.map(doubleCon => doubleCon.kor);
 let allDoubCons = doubCons.length;
 
@@ -114,6 +116,7 @@ for (let i = 0; i < allVowels; i++) {
         card.innerHTML = korVowels[i];
         card.classList.add("card")
         vowelsContainer.appendChild(card);
+
 };
 
 let engVowels = vowels.map(vowel => vowel.eng);
@@ -169,7 +172,27 @@ for (let i = 0; i < allEngCompVowels; i++) {
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engCompoundVowels[i];
         cardBack.classList.add("card-back");
-
         cvBackContainer.appendChild(cardBack);
 };
 
+//button function
+
+let conButton = document.getElementById('consonants-button');
+conButton.addEventListener('click', conClick) ; 
+
+ function conClick() {
+    vowelsContainer.classList.add("nodisplay");
+    cvContainer.classList.add("nodisplay");
+    consContainer.classList.remove("nodisplay");
+    dcContainer.classList.remove("nodisplay");
+};
+
+let vowelButton = document.getElementById('vowels-button');
+vowelButton.addEventListener('click', vowelClick) ; 
+
+ function vowelClick() {
+    vowelsContainer.classList.remove("nodisplay");
+    cvContainer.classList.remove("nodisplay");
+    consContainer.classList.add("nodisplay");
+    dcContainer.classList.add("nodisplay");
+};
