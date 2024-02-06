@@ -12,15 +12,52 @@
     <title>Hangul Now</title>
 </head>
 <body>
-    <header>
+    <header class="header-container">
+        <div>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#rules">
+                Rules
+        </div>
 
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="rules" tabindex="-1" aria-labelledby="rules" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="rules">Rules</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Drag the korean letter to the sound it makes. If you are correct, it will stay. If it's wrong, it will
+          return to its original place. There are 10 rounds to score points on. If you skip a turn, you will not get the point.
+          <p>Good luck!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+        <div class="menu">
+            <a href="index.html" aria-label="home"><i class="fa-solid fa-house house-icon"></i></a>
+        </div>
     </header>
     <main>
-       
-        
+        <section>
+            <div id="score" class="container">0 / 10</div>
+            <div class="game-container">
+                <div class="draggable-objects"></div>
+                <div class="drop-points"></div>
+            </div>
+            <div class="container">
+                <button id="start">Next</button>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>
+     
             Check us out on social media:
             <span>
                 <a href="https://www.facebook.com" target="_blank"
@@ -30,9 +67,10 @@
                 <a href="https://www.instagram.com" target="_blank"
                 aria-label="Go to our Instagram page to see more of what we do"><i class="fa-brands fa-instagram footer-icons"></i></a>
             </span>
-        </p>
+       
         
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assets/scripts/game.js"></script>
 </body>
 </html>
