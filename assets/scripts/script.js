@@ -50,8 +50,7 @@ let doubleConsonants = [
     {eng: 'jj', kor: 'ㅉ', audio: 'assets/audio/jj.mp3'},
 ];
 
-//consonants
-
+//Add consonants to page
 
 let korCons = consonants.map(consonant => consonant.kor);
 let allCons = korCons.length;
@@ -80,7 +79,7 @@ let consHeader = document.createElement('h2');
 consHeader.innerHTML = "Double Consonants"
 consContainer.appendChild(consHeader);
 
-//double consonants
+// Add double consonants to page
 
 let doubCons = doubleConsonants.map(doubleCon => doubleCon.kor);
 let allDoubCons = doubCons.length;
@@ -104,7 +103,8 @@ for (let i = 0; i < allEngDoubCons; i++) {
         cardBack.classList.add("card-back");
         dcBackContainer.appendChild(cardBack);
 };
-// Vowels
+
+// Add vowels to page
 
 let korVowels = vowels.map(vowel => vowel.kor);
 let allVowels = korVowels.length;
@@ -130,30 +130,12 @@ for (let i = 0; i < allEngVowels; i++) {
         vowelsBackContainer.appendChild(cardBack);
 };
 
-// function flip(event) {
-//      this.classList.toggle("hidden");
-//    };
-
-//    function unflip(event) {
-//      this.classList.toggle("hidden");
-// };
-
-   
-//    let card = document.getElementsByClassName('card');
-//       for (let i = 0 ; i < card.length; i++)  {
-//       card[i].addEventListener('click' , flip) ; 
-//    };
-   
-//    let cardBack = document.getElementsByClassName('card-back');
-//       for (let i = 0 ; i < card.length; i++)  {
-//       cardBack[i].addEventListener('click' , unflip) ; 
-//    };
-
 let vowelsHeader = document.createElement('h2');
 vowelsHeader.innerHTML = "Compound Vowels"
 vowelsContainer.appendChild(vowelsHeader);
 
-//compound vowels
+//Add compound vowels to page
+
 let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
 let allCompoundVowels = korCompoundVowels.length;
 
@@ -196,3 +178,16 @@ vowelButton.addEventListener('click', vowelClick) ;
     consContainer.classList.add("nodisplay");
     dcContainer.classList.add("nodisplay");
 };
+
+
+//flipcard function
+
+   let card = document.getElementsByClassName('card');
+      for (let i = 0 ; i < card.length; i++)  {
+      card[i].addEventListener('click' , flip) ; 
+   };
+   
+
+function flip(event) {
+     this.classList.toggle("hidden");
+   };
