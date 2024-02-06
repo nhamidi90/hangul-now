@@ -16,7 +16,7 @@ body{
 
 .container {
     display: flex;
-    max-width: 80rem;
+    max-width: 70rem;
     align-items: center;
     margin: auto;
     justify-content: center;
@@ -169,7 +169,6 @@ footer {
     flex-direction: row;
     gap: 50px;
     margin: 50px auto;
-    max-width:80rem;
     padding-left: 50px;
 }
 
@@ -182,7 +181,6 @@ footer {
     flex-direction: row;
     gap: 50px;
     margin: 50px auto;
-    max-width:80rem;
     padding-left: 50px;
 }
 
@@ -193,7 +191,6 @@ footer {
     flex-direction: row;
     gap: 50px;
     margin: 50px auto;
-    max-width:80rem;
     padding-left: 50px;
 }
 
@@ -206,7 +203,6 @@ footer {
     flex-direction: row;
     gap: 50px;
     margin: 0 auto 50px auto;
-    max-width:80rem;
     padding-left: 50px;
 }
 
@@ -217,7 +213,6 @@ footer {
     flex-direction: row;
     gap: 50px;
     margin: 50px auto;
-    max-width:80rem;
     padding-left: 50px;
 }
 
@@ -230,7 +225,6 @@ footer {
     flex-direction: row;
     gap: 50px;
     margin: 50px auto;
-    max-width:80rem;
     padding-left: 50px;
 }
 
@@ -241,7 +235,6 @@ footer {
     flex-direction: row;
     gap: 50px;
     margin: 50px auto;
-    max-width:80rem;
     padding-left: 50px;
 }
 
@@ -254,7 +247,6 @@ footer {
     flex-direction: row;
     gap: 50px;
     margin: 50px auto;
-    max-width:80rem;
     padding-left: 50px;
 }
 
