@@ -163,51 +163,26 @@ footer {
 /* ---------------- Letters */
 
 #vowels-container {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 50px;
     margin: 50px auto;
     padding-left: 50px;
-}
-
-#vowels-back-container {
-    position: absolute;
-    top:-50px;
-    left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 50px;
-    margin: 50px auto;
-    padding-left: 50px;
+    width: 100%
 }
 
 #cv-container {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 50px;
     margin: 50px auto;
     padding-left: 50px;
-}
-
-#cv-back-container {
-    position: absolute;
-    top:0px;
-    left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 50px;
-    margin: 0 auto 50px auto;
-    padding-left: 50px;
+    width:100%;
 }
 
 #consonants-container {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -216,32 +191,9 @@ footer {
     padding-left: 50px;
 }
 
-#consonants-back-container {
-    position: absolute;
-    top:-50px;
-    left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 50px;
-    margin: 50px auto;
-    padding-left: 50px;
-}
 
 #dc-container {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 50px;
-    margin: 50px auto;
-    padding-left: 50px;
-}
-
-#dc-back-container {
-    position: absolute;
-    top:-50px;
-    left: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -259,6 +211,16 @@ footer {
 }
 
 .card {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    background-color: yellow;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+.card-front {
+    position: absolute;
     width: 150px;
     height: 200px;
     line-height: 200px;
@@ -266,9 +228,12 @@ footer {
     font-size: 90px;
     text-align: center;
     border: 4px solid;
+    backface-visibility: hidden;
+  
 }
 
 .card-back {
+    position: absolute;
     width: 150px;
     height: 200px;
     line-height: 200px;
@@ -276,6 +241,13 @@ footer {
     font-size: 50px;
     text-align: center;
     border: 4px solid;
+    z-index: -1;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.flipcard {
+    transform: rotateY(180deg);
 }
 
 .buttons-container {
