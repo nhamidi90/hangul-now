@@ -52,27 +52,31 @@ let doubleConsonants = [
 
 //Add consonants to page
 
+
 let korCons = consonants.map(consonant => consonant.kor);
 let allCons = korCons.length;
 
 let consContainer = document.getElementById("consonants-container");
+let conCardContainer = document.getElementsByClassName("card");
 
 for (let i = 0; i < allCons; i++) {
     let card = document.createElement('div');
-        card.innerHTML = korCons[i];
         card.classList.add("card")
         consContainer.appendChild(card);
+        let cardfront = document.createElement('div');
+        cardfront.innerHTML = korCons[i];
+        cardfront.classList.add("card-front")
+        conCardContainer[i].appendChild(cardfront);
 };
 
 let engCons = consonants.map(consonant => consonant.eng);
 let allEngCons = engCons.length;
 
-let consBackContainer = document.getElementById("consonants-back-container");
 for (let i = 0; i < allEngCons; i++) {
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engCons[i];
         cardBack.classList.add("card-back");
-        consBackContainer.appendChild(cardBack);
+        conCardContainer[i].appendChild(cardBack);
 };
 
 let consHeader = document.createElement('h2');
@@ -85,23 +89,26 @@ let doubCons = doubleConsonants.map(doubleCon => doubleCon.kor);
 let allDoubCons = doubCons.length;
 
 let dcContainer = document.getElementById("dc-container");
+let dcCardCon = document.getElementsByClassName("card");
 
 for (let i = 0; i < allDoubCons; i++) {
     let card = document.createElement('div');
-        card.innerHTML = doubCons[i];
         card.classList.add("card")
         dcContainer.appendChild(card);
+    let cardfront = document.createElement('div');
+        cardfront.innerHTML = doubCons[i];
+        cardfront.classList.add("card-front")
+        dcCardCon[i].appendChild(cardfront);
 };
 
 let engDoubCons = doubleConsonants.map(engDoubCon => engDoubCon.eng);
 let allEngDoubCons = engDoubCons.length;
 
-let dcBackContainer = document.getElementById("dc-back-container");
 for (let i = 0; i < allEngDoubCons; i++) {
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engDoubCons[i];
         cardBack.classList.add("card-back");
-        dcBackContainer.appendChild(cardBack);
+        dcCardCon[i].appendChild(cardBack);
 };
 
 // Add vowels to page
@@ -110,24 +117,27 @@ let korVowels = vowels.map(vowel => vowel.kor);
 let allVowels = korVowels.length;
 
 let vowelsContainer = document.getElementById("vowels-container");
+let cardContainer = document.getElementsByClassName("card");
 
 for (let i = 0; i < allVowels; i++) {
     let card = document.createElement('div');
-        card.innerHTML = korVowels[i];
         card.classList.add("card")
         vowelsContainer.appendChild(card);
+    let cardfront = document.createElement('div');
+        cardfront.innerHTML = korVowels[i];
+        cardfront.classList.add("card-front")
+        cardContainer[i].appendChild(cardfront);
 
 };
 
 let engVowels = vowels.map(vowel => vowel.eng);
 let allEngVowels = engVowels.length;
 
-let vowelsBackContainer = document.getElementById("vowels-back-container");
 for (let i = 0; i < allEngVowels; i++) {
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engVowels[i];
         cardBack.classList.add("card-back");
-        vowelsBackContainer.appendChild(cardBack);
+        cardContainer[i].appendChild(cardBack);
 };
 
 let vowelsHeader = document.createElement('h2');
@@ -139,22 +149,27 @@ vowelsContainer.appendChild(vowelsHeader);
 let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
 let allCompoundVowels = korCompoundVowels.length;
 
+let cvContainer = document.getElementById("cv-container");
+
+for (let i = 0; i < allCompoundVowels; i++) {
+    let cvCard = document.createElement('div');
+        cvCard.classList.add("card")
+        cvContainer.appendChild(cvCard);
+    let cardfront = document.createElement('div');
+        cardfront.innerHTML = korCompoundVowels[i];
+        cardfront.classList.add("card-front")
+        cvCard.appendChild(cardfront);
+};
+
 let engCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.eng);
 let allEngCompVowels = engCompoundVowels.length;
 
-let cvContainer = document.getElementById("cv-container");
-for (let i = 0; i < allCompoundVowels; i++) {
-    let card = document.createElement('div');
-        card.innerHTML = korCompoundVowels[i];
-        card.classList.add("card")
-        cvContainer.appendChild(card);
-};
-let cvBackContainer = document.getElementById("cv-back-container");
 for (let i = 0; i < allEngCompVowels; i++) {
+    let cvCard = document.createElement('div');
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engCompoundVowels[i];
         cardBack.classList.add("card-back");
-        cvBackContainer.appendChild(cardBack);
+        cvCard.appendChild(cardBack);
 };
 
 //button function
@@ -189,5 +204,5 @@ vowelButton.addEventListener('click', vowelClick) ;
    
 
 function flip(event) {
-     this.classList.toggle("hidden");
+     this.classList.toggle("flipcard");
    };
