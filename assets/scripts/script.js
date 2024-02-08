@@ -209,15 +209,16 @@ let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
 let allCompoundVowels = korCompoundVowels.length;
 
 let cvContainer = document.getElementById("cv-container");
+let compoundCard = document.getElementsByClassName("card2");
 
 for (let i = 0; i < allCompoundVowels; i++) {
     let cvCard = document.createElement('div');
-        cvCard.classList.add("card")
+        cvCard.classList.add("card2")
         cvContainer.appendChild(cvCard);
-    let cardfront = document.createElement('div');
-        cardfront.innerHTML = korCompoundVowels[i];
-        cardfront.classList.add("card-front")
-        cvCard.appendChild(cardfront);
+    let cardFront = document.createElement('div');
+        cardFront.innerHTML = korCompoundVowels[i];
+        cardFront.classList.add("card-front")
+        compoundCard[i].appendChild(cardFront);
 };
 
 let engCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.eng);
@@ -228,7 +229,7 @@ for (let i = 0; i < allEngCompVowels; i++) {
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engCompoundVowels[i];
         cardBack.classList.add("card-back");
-        cvCard.appendChild(cardBack);
+        compoundCard[i].appendChild(cardBack);
 };
 
 
