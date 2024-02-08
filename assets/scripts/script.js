@@ -79,6 +79,26 @@ for (let i = 0; i < allEngCons; i++) {
         conCardContainer[i].appendChild(cardBack);
 };
 
+// Consonants audio
+
+let consonantsAudio = consonants.map(consonant => consonant.audio);
+let conAudio = consonantsAudio.length;
+
+for (let i = 0; i < conAudio; i++) {
+    let play = new Image();
+    play.src = 'assets/images/audio.png';
+    play.classList.add("audio");
+    conCardContainer[i].appendChild(play);
+
+function playConsonant() {
+    let audio = new Audio (consonantsAudio[i]);
+    audio.play()
+}
+play.addEventListener('click', playConsonant);
+};
+
+// Double consonants header
+
 let consHeader = document.createElement('h2');
 consHeader.innerHTML = "Double Consonants"
 consContainer.appendChild(consHeader);
@@ -114,6 +134,24 @@ for (let i = 0; i < allEngDoubCons; i++) {
        dcContainer.appendChild(cardBack);
 };
 
+// Double consonants audio
+
+let doubConAudio = doubleConsonants.map(doubCon => doubCon.audio);
+let dcAudio = doubConAudio.length;
+
+for (let i = 0; i < dcAudio; i++) {
+    let play = new Image();
+    play.src = 'assets/images/audio.png';
+    play.classList.add("audio");
+    // dcContainer[i].appendChild(play);
+
+function playdoubCon() {
+    let audio = new Audio (doubConAudio[i]);
+    audio.play()
+}
+play.addEventListener('click', playdoubCon);
+};
+
 // Add vowels to page
 
 let korVowels = vowels.map(vowel => vowel.kor);
@@ -130,7 +168,8 @@ for (let i = 0; i < allVowels; i++) {
         cardfront.innerHTML = korVowels[i];
         cardfront.classList.add("card-front")
         cardContainer[i].appendChild(cardfront);
-
+        let audioBox = document.createElement('div');
+        cardContainer[i].appendChild(audioBox);
 };
 
 let engVowels = vowels.map(vowel => vowel.eng);
@@ -143,22 +182,25 @@ for (let i = 0; i < allEngVowels; i++) {
         cardContainer[i].appendChild(cardBack);
 };
 
+// Vowels header
+
 let vowelsHeader = document.createElement('h2');
 vowelsHeader.innerHTML = "Compound Vowels"
 vowelsContainer.appendChild(vowelsHeader);
 
-//audio
+// vowels audio
 
-let korVowelsAudio = vowels.map(vowel => vowel.audio);
-let vowelAudio = korVowelsAudio.length;
+let vowelsAudio = vowels.map(vowel => vowel.audio);
+let vowelAudio = vowelsAudio.length;
 
 for (let i = 0; i < vowelAudio; i++) {
     let play = new Image();
     play.src = 'assets/images/audio.png';
-    vowelsContainer.appendChild(play);
+    play.classList.add("audio");
+    cardContainer[i].appendChild(play);
 
 function playVowel() {
-    let audio = new Audio (korVowelsAudio[i]);
+    let audio = new Audio (vowelsAudio[i]);
     audio.play()
 }
 play.addEventListener('click', playVowel);
@@ -190,6 +232,25 @@ for (let i = 0; i < allEngCompVowels; i++) {
         cardBack.innerHTML = engCompoundVowels[i];
         cardBack.classList.add("card-back");
         cvCard.appendChild(cardBack);
+};
+
+
+// Compound vowels audio
+
+let CVAudio = compoundVowels.map(compoundVowel => compoundVowel.audio);
+let CVowelsAudio = CVAudio.length;
+
+for (let i = 0; i < CVAudio; i++) {
+    let play = new Image();
+    play.src = 'assets/images/audio.png';
+    play.classList.add("audio");
+    cvContainer.appendChild(play);
+
+function playCV() {
+    let audio = new Audio (CVAudio[i]);
+    audio.play()
+}
+play.addEventListener('click', playCV);
 };
 
 //button function
