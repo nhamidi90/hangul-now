@@ -109,29 +109,26 @@ let doubCons = doubleConsonants.map(doubleCon => doubleCon.kor);
 let allDoubCons = doubCons.length;
 
 let dcContainer = document.getElementById("dc-container");
-
+let dcCardCont = document.getElementsByClassName("card2");
 
 for (let i = 0; i < allDoubCons; i++) {
-    let card = document.createElement('div');
-        card.classList.add("card")
-        dcContainer.appendChild(card);
-    let cardfront = document.createElement('div');
-        cardfront.innerHTML = doubCons[i];
-        cardfront.classList.add("card-front")
-        card.appendChild(cardfront);
+    let card2 = document.createElement('div');
+        card2.classList.add("card2");
+        dcContainer.appendChild(card2);
+    let cardFront = document.createElement('div');
+        cardFront.innerHTML = doubCons[i];
+        cardFront.classList.add("card-front");
+        dcCardCont[i].appendChild(cardFront);
 };
 
 let engDoubCons = doubleConsonants.map(engDoubCon => engDoubCon.eng);
 let allEngDoubCons = engDoubCons.length;
 
 for (let i = 0; i < allEngDoubCons; i++) {
-    // let dcCard = document.createElement('div');
-    // dcCard.classList.add("card")
-    //     dcContainer.appendChild(dcCard);
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engDoubCons[i];
         cardBack.classList.add("card-back");
-       dcContainer.appendChild(cardBack);
+        dcCardCont[i].appendChild(cardBack);
 };
 
 // Double consonants audio
@@ -282,7 +279,11 @@ vowelButton.addEventListener('click', vowelClick) ;
       for (let i = 0 ; i < card.length; i++)  {
       card[i].addEventListener('click' , flip) ; 
    };
-   
+
+   let card2 = document.getElementsByClassName('card2');
+   for (let i = 0 ; i < card2.length; i++)  {
+   card2[i].addEventListener('click' , flip) ; 
+};
 
 function flip(event) {
      this.classList.toggle("flipcard");
