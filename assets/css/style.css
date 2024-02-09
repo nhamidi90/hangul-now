@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600&family=Single+Day&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600&family=Single+Day&family=PT+Sans&family=Gaegu:wght@700&display=swap');
 
 /* ----------------Global settings */
 
@@ -180,7 +180,6 @@ footer {
     position: relative;
     width: 150px;
     height: 260px;
-    /* background-color: yellow; */
 }
 
 .card, .card2 {
@@ -189,7 +188,7 @@ footer {
     height: 200px;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .card-front {
@@ -197,12 +196,15 @@ footer {
     width: 150px;
     height: 200px;
     line-height: 200px;
-    background-color: aqua;
     font-size: 90px;
+    font-family: 'gaegu', sans-serif;
     text-align: center;
     border: 4px solid;
     backface-visibility: hidden;
-  
+    background-image: url(../images/card-front.png);
+    background-size: 150px, 200px;
+    border-radius: 10px;
+    box-shadow: 5px 8px 5px #abaeb4;
 }
 
 .card-back {
@@ -210,13 +212,17 @@ footer {
     width: 150px;
     height: 200px;
     line-height: 200px;
-    background-color: aqua;
+    background-image: url(../images/card-back.png);
+    background-size: 150px, 200px;
     font-size: 50px;
+    font-family: 'gaegu', sans-serif;
     text-align: center;
     border: 4px solid;
     z-index: -1;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    border-radius: 10px;
+    box-shadow: 5px 8px 5px #abaeb4;
 }
 
 .flipcard {
