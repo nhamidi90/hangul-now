@@ -230,10 +230,16 @@ footer {
 }
 
 .audio {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-left: 5px;
 }
+
+.audio:hover{
+    background-color: rgb(148, 179, 248) !important;
+    border-radius: 50% 50%;
+}
+
 .buttons-container {
     display: flex;
     flex-wrap: wrap;
