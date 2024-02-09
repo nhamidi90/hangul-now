@@ -57,12 +57,16 @@ let korCons = consonants.map(consonant => consonant.kor);
 let allCons = korCons.length;
 
 let consContainer = document.getElementById("consonants-container");
+let conOuterBox = document.getElementsByClassName("outer-box")
 let conCardContainer = document.getElementsByClassName("card");
 
 for (let i = 0; i < allCons; i++) {
+    let conOuterBox = document.createElement('div');
+    conOuterBox.classList.add("outer-box")
+    consContainer.appendChild(conOuterBox);
     let card = document.createElement('div');
         card.classList.add("card")
-        consContainer.appendChild(card);
+        conOuterBox.appendChild(card);
         let cardfront = document.createElement('div');
         cardfront.innerHTML = korCons[i];
         cardfront.classList.add("card-front")
@@ -88,7 +92,7 @@ for (let i = 0; i < conAudio; i++) {
     let play = new Image();
     play.src = 'assets/images/audio.png';
     play.classList.add("audio");
-    conCardContainer[i].appendChild(play);
+    conOuterBox[i].appendChild(play);
 
 function playConsonant() {
     let audio = new Audio (consonantsAudio[i]);
@@ -109,12 +113,16 @@ let doubCons = doubleConsonants.map(doubleCon => doubleCon.kor);
 let allDoubCons = doubCons.length;
 
 let dcContainer = document.getElementById("dc-container");
+let conOuterBox2 = document.getElementsByClassName("outer-box2")
 let dcCardCont = document.getElementsByClassName("card2");
 
 for (let i = 0; i < allDoubCons; i++) {
+    let conOuterBox2 = document.createElement('div');
+        conOuterBox2.classList.add("outer-box2")
+        dcContainer.appendChild(conOuterBox2);
     let card2 = document.createElement('div');
         card2.classList.add("card2");
-        dcContainer.appendChild(card2);
+        conOuterBox2.appendChild(card2);
     let cardFront = document.createElement('div');
         cardFront.innerHTML = doubCons[i];
         cardFront.classList.add("card-front");
@@ -140,7 +148,7 @@ for (let i = 0; i < dcAudio; i++) {
     let play = new Image();
     play.src = 'assets/images/audio.png';
     play.classList.add("audio");
-    dcCardCont[i].appendChild(play);
+    conOuterBox2[i].appendChild(play);
 
 function playdoubCon() {
     let audio = new Audio (doubConAudio[i]);
@@ -156,11 +164,15 @@ let allVowels = korVowels.length;
 
 let vowelsContainer = document.getElementById("vowels-container");
 let cardContainer = document.getElementsByClassName("card");
+let outerBox = document.getElementsByClassName("outer-box")
 
 for (let i = 0; i < allVowels; i++) {
+    let outerBox = document.createElement('div');
+        outerBox.classList.add("outer-box")
+        vowelsContainer.appendChild(outerBox);
     let card = document.createElement('div');
         card.classList.add("card")
-        vowelsContainer.appendChild(card);
+        outerBox.appendChild(card);
     let cardfront = document.createElement('div');
         cardfront.innerHTML = korVowels[i];
         cardfront.classList.add("card-front")
@@ -192,7 +204,7 @@ for (let i = 0; i < vowelAudio; i++) {
     let play = new Image();
     play.src = 'assets/images/audio.png';
     play.classList.add("audio");
-    cardContainer[i].appendChild(play);
+    outerBox[i].appendChild(play);
 
 function playVowel() {
     let audio = new Audio (vowelsAudio[i]);
@@ -207,12 +219,16 @@ let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
 let allCompoundVowels = korCompoundVowels.length;
 
 let cvContainer = document.getElementById("cv-container");
+let outerBox2 = document.getElementsByClassName("outer-box2")
 let compoundCard = document.getElementsByClassName("card2");
 
 for (let i = 0; i < allCompoundVowels; i++) {
+    let outerBox2 = document.createElement('div');
+        outerBox2.classList.add("outer-box2")
+        cvContainer.appendChild(outerBox2);
     let card2 = document.createElement('div');
         card2.classList.add("card2")
-        cvContainer.appendChild(card2);
+        outerBox2.appendChild(card2);
     let cardFront = document.createElement('div');
         cardFront.innerHTML = korCompoundVowels[i];
         cardFront.classList.add("card-front")
@@ -239,7 +255,7 @@ for (let i = 0; i < CVowelsAudio; i++) {
     let play = new Image();
     play.src = 'assets/images/audio.png';
     play.classList.add("audio");
-    compoundCard[i].appendChild(play);
+    outerBox2[i].appendChild(play);
 
 function playCV() {
     let audio = new Audio (CVAudio[i]);
