@@ -90,7 +90,7 @@ let conAudio = consonantsAudio.length;
 
 for (let i = 0; i < conAudio; i++) {
     let play = new Image();
-    play.src = 'assets/images/audio.png';
+    play.src = 'assets/images/audio.svg';
     play.classList.add("audio");
     conOuterBox[i].appendChild(play);
 
@@ -146,7 +146,7 @@ let dcAudio = doubConAudio.length;
 
 for (let i = 0; i < dcAudio; i++) {
     let play = new Image();
-    play.src = 'assets/images/audio.png';
+    play.src = 'assets/images/audio.svg';
     play.classList.add("audio");
     conOuterBox2[i].appendChild(play);
 
@@ -202,7 +202,7 @@ let vowelAudio = vowelsAudio.length;
 
 for (let i = 0; i < vowelAudio; i++) {
     let play = new Image();
-    play.src = 'assets/images/audio.png';
+    play.src = 'assets/images/audio.svg';
     play.classList.add("audio");
     outerBox[i].appendChild(play);
 
@@ -253,7 +253,7 @@ let CVowelsAudio = CVAudio.length;
 
 for (let i = 0; i < CVowelsAudio; i++) {
     let play = new Image();
-    play.src = 'assets/images/audio.png';
+    play.src = 'assets/images/audio.svg';
     play.classList.add("audio");
     outerBox2[i].appendChild(play);
 
