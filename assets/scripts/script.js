@@ -140,7 +140,7 @@ for (let i = 0; i < dcAudio; i++) {
     let play = new Image();
     play.src = 'assets/images/audio.png';
     play.classList.add("audio");
-    // dcContainer[i].appendChild(play);
+    dcCardCont[i].appendChild(play);
 
 function playdoubCon() {
     let audio = new Audio (doubConAudio[i]);
@@ -165,8 +165,6 @@ for (let i = 0; i < allVowels; i++) {
         cardfront.innerHTML = korVowels[i];
         cardfront.classList.add("card-front")
         cardContainer[i].appendChild(cardfront);
-        let audioBox = document.createElement('div');
-        cardContainer[i].appendChild(audioBox);
 };
 
 let engVowels = vowels.map(vowel => vowel.eng);
@@ -212,9 +210,9 @@ let cvContainer = document.getElementById("cv-container");
 let compoundCard = document.getElementsByClassName("card2");
 
 for (let i = 0; i < allCompoundVowels; i++) {
-    let cvCard = document.createElement('div');
-        cvCard.classList.add("card2")
-        cvContainer.appendChild(cvCard);
+    let card2 = document.createElement('div');
+        card2.classList.add("card2")
+        cvContainer.appendChild(card2);
     let cardFront = document.createElement('div');
         cardFront.innerHTML = korCompoundVowels[i];
         cardFront.classList.add("card-front")
@@ -225,7 +223,6 @@ let engCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.eng);
 let allEngCompVowels = engCompoundVowels.length;
 
 for (let i = 0; i < allEngCompVowels; i++) {
-    let cvCard = document.createElement('div');
     let cardBack = document.createElement('div');
         cardBack.innerHTML = engCompoundVowels[i];
         cardBack.classList.add("card-back");
@@ -238,11 +235,11 @@ for (let i = 0; i < allEngCompVowels; i++) {
 let CVAudio = compoundVowels.map(compoundVowel => compoundVowel.audio);
 let CVowelsAudio = CVAudio.length;
 
-for (let i = 0; i < CVAudio; i++) {
+for (let i = 0; i < CVowelsAudio; i++) {
     let play = new Image();
     play.src = 'assets/images/audio.png';
     play.classList.add("audio");
-    cvContainer.appendChild(play);
+    compoundCard[i].appendChild(play);
 
 function playCV() {
     let audio = new Audio (CVAudio[i]);
