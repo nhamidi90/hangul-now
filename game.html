@@ -46,10 +46,18 @@
     </header>
     <main>
         <section>
-            <div id="score" class="container">0 / 10</div>
+            <div id="score" class="container"><span id=current-game>0</span> / 10</div>
             <div class="game-container">
-                <div class="draggable-objects"></div>
-                <div class="drop-points"></div>
+                <div class="draggable-objects">
+                  <div id="obj1"></div>
+                  <div id="obj2"></div>
+                  <div id="obj3"></div>
+                </div>
+                <div class="drop-points">
+                  <div id="point1"></div>
+                  <div id="point2"></div>
+                  <div id="point3"></div>
+                </div>
             </div>
             <div class="container">
                 <button id="start">Next</button>
