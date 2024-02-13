@@ -1,4 +1,4 @@
-[
+const data = [
     {id: 1, eng: 'a', kor: 'ㅏ'},
     {id: 2, eng: 'ya', kor: 'ㅑ'},
     {id: 3, eng: 'eo', kor: 'ㅓ'},
@@ -24,4 +24,25 @@
     {id: 23, eng: 'p', kor: 'ㅍ'},
     {id: 24, eng: 'h', kor: 'ㅎ'},
 ];
+
+
+let randomIndex1;
+let randomIndex2;
+let randomIndex3;
+
+const randomValueGenerator = () => {
+  randomIndex1 = Math.floor(Math.random() * data.length);
+  randomIndex2 = Math.floor(Math.random() * data.length);
+  randomIndex3 = Math.floor(Math.random() * data.length);
+
+  document.getElementById('obj1').innerHTML = data[randomIndex1].kor;
+  document.getElementById('obj2').innerHTML = data[randomIndex2].kor;
+  document.getElementById('obj3').innerHTML = data[randomIndex3].kor;
+
+  document.getElementById('point1').innerHTML = data[randomIndex1].eng;
+  document.getElementById('point2').innerHTML = data[randomIndex2].eng;
+  document.getElementById('point3').innerHTML = data[randomIndex3].eng;
+};
+
+randomValueGenerator();
 
