@@ -39,10 +39,20 @@ const randomValueGenerator = () => {
   document.getElementById('obj2').innerHTML = data[randomIndex2].kor;
   document.getElementById('obj3').innerHTML = data[randomIndex3].kor;
 
-  document.getElementById('point1').innerHTML = data[randomIndex1].eng;
-  document.getElementById('point2').innerHTML = data[randomIndex2].eng;
-  document.getElementById('point3').innerHTML = data[randomIndex3].eng;
+  let unshuffled = [
+  data[randomIndex1].eng,
+  data[randomIndex2].eng,
+  data[randomIndex3].eng
+  ];
+
+  let shuffled = unshuffled
+  .map(value => ({ value, sort: Math.random() }))
+  .sort((a, b) => a.sort - b.sort)
+  .map(({ value }) => value)
+
+  document.getElementById('point1').innerHTML = shuffled[0];
+  document.getElementById('point2').innerHTML = shuffled[1];
+  document.getElementById('point3').innerHTML = shuffled[2];
 };
 
 randomValueGenerator();
-
