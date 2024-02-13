@@ -25,6 +25,7 @@ const data = [
     {id: 24, eng: 'h', kor: 'ㅎ'},
 ];
 
+//generate random letters and append to boxes
 
 let randomIndex1;
 let randomIndex2;
@@ -39,6 +40,7 @@ const randomValueGenerator = () => {
   document.getElementById('obj2').innerHTML = data[randomIndex2].kor;
   document.getElementById('obj3').innerHTML = data[randomIndex3].kor;
 
+  //shuffle english letters
   let unshuffled = [
   data[randomIndex1].eng,
   data[randomIndex2].eng,
@@ -50,6 +52,7 @@ const randomValueGenerator = () => {
   .sort((a, b) => a.sort - b.sort)
   .map(({ value }) => value)
 
+  //append shuffled letters to boxes
   document.getElementById('point1').innerHTML = shuffled[0];
   document.getElementById('point2').innerHTML = shuffled[1];
   document.getElementById('point3').innerHTML = shuffled[2];
