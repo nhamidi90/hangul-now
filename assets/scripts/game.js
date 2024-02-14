@@ -60,7 +60,7 @@ const randomValueGenerator = () => {
 
 randomValueGenerator();
 
-
+// Drag and drop functions
 const draggable = document.querySelectorAll(".draggable");
 const droppable = document.querySelectorAll(".droppable");
 
@@ -77,25 +77,46 @@ droppable.forEach(elem => {
 
 function dragStart(event) {
   event.dataTransfer.setData("text", event.target.id);
-}
+};
 
 function dragEnter(event) {
   event.target.classList.add("drop-hover");
-}
+};
 
 function dragLeave(event) {
   event.target.classList.remove("drop-hover");
-}
+};
 
 function dragOver(event) {
   event.preventDefault();
-}
+};
 
 function drop(event) {
   event.preventDefault();
+  event.target.classList.remove("drop-hover");
   const dragData = event.dataTransfer.getData("text");
-  event.target.appendChild(document.getElementById(dragData));
-  // let filler = document.createElement('div');
-  // filler.classList.add("filler")
-  // document.getElementsByClassName("draggable-objects").appendChild(filler);
-}
+
+  let letterToFind = data[randomIndex1].eng;
+  let objectWithEng = data.find(obj => obj.eng === letterToFind);
+  let korLetterToFind = data[randomIndex1].kor;
+  let objectWithKor = data.find(obj => obj.kor === korLetterToFind);
+  if (objectWithEng.id === objectWithKor.id) {
+    event.target.classList.add("dropped");
+    const draggableElement = document.getElementById(dragData);
+    draggableElement.classList.add("dragged", "dropped");
+    draggableElement.setAttribute("draggable", "false")
+    event.target.innerHTML= `${dragData}`;
+  } else {
+    console.log('English letter not found.');
+  } 
+};
+
+// if (objectWithEng) {
+//   console.log(objectWithEng.id);
+// } else {
+//   console.log('English letter not found.');
+// }if (objectWithKor) {
+//   console.log(objectWithKor.id);
+// } else {
+//   console.log('Korean letter not found.');
+// }
