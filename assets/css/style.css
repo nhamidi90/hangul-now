@@ -264,20 +264,23 @@ footer {
     gap: 50px;
 }
 
-.drop-hover {
+.draggable:hover {
+    opacity: 0.8;
+    
+}.drop-hover {
     border-width: 5px;
     border-color: antiquewhite;
     transform: scale(1.1,1.1);
 }
 
-/* .filler {
-    width: 140px;
-    height: 140px;
-    background-color: #84d5c0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
+.dragged {
+    opacity: 0.1;
+}
+
+.dropped {
+    pointer-events: none;
+    border-style: solid;
+}
 
 #obj1, #obj2, #obj3 {
     width: 140px;
@@ -289,6 +292,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: grab;
 }
 
 #point1, #point2, #point3 {
