@@ -59,3 +59,43 @@ const randomValueGenerator = () => {
 };
 
 randomValueGenerator();
+
+
+const draggable = document.querySelectorAll(".draggable");
+const droppable = document.querySelectorAll(".droppable");
+
+draggable.forEach(elem => {
+  elem.addEventListener("dragstart", dragStart);
+});
+
+droppable.forEach(elem => {
+  elem.addEventListener("dragover", dragOver);
+  elem.addEventListener("dragenter", dragEnter);
+  elem.addEventListener("dragleave", dragLeave);
+  elem.addEventListener("drop", drop);
+});
+
+function dragStart(event) {
+  event.dataTransfer.setData("text", event.target.id);
+}
+
+function dragEnter(event) {
+  event.target.classList.add("drop-hover");
+}
+
+function dragLeave(event) {
+  event.target.classList.remove("drop-hover");
+}
+
+function dragOver(event) {
+  event.preventDefault();
+}
+
+function drop(event) {
+  event.preventDefault();
+  const dragData = event.dataTransfer.getData("text");
+  event.target.appendChild(document.getElementById(dragData));
+  // let filler = document.createElement('div');
+  // filler.classList.add("filler")
+  // document.getElementsByClassName("draggable-objects").appendChild(filler);
+}
