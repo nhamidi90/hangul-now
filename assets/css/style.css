@@ -305,6 +305,14 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+.your-score {
+    font-size: 50px;
+}
+
+#score {
+    color: red;
+}
 /* ---------------- Media Queries */
 
 @media only screen and (max-width: 480px) {
