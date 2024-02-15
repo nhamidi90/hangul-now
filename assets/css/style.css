@@ -245,7 +245,7 @@ footer {
     margin-bottom: 10px;
 }
 
-.game-container {
+#game-container {
     max-width: 80rem;
     width: 40rem;
     height: 400px;
