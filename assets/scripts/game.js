@@ -25,6 +25,14 @@ const data = [
     {id: 24, eng: 'h', kor: 'ㅎ'},
 ];
 
+
+// Game
+let game = {
+questionNumber: 1,
+score: 0,
+totalNumberOfRounds: 10,
+}
+
 //generate random letters and append to boxes
 
 let randomIndex1;
@@ -100,12 +108,14 @@ function drop(event) {
   let objectWithEng = data.find(obj => obj.eng === letterToFind);
   let korLetterToFind = data[randomIndex1].kor;
   let objectWithKor = data.find(obj => obj.kor === korLetterToFind);
+
   if (objectWithEng.id === objectWithKor.id) {
     event.target.classList.add("dropped");
     const draggableElement = document.getElementById(dragData);
     draggableElement.classList.add("dragged", "dropped");
     draggableElement.setAttribute("draggable", "false")
     event.target.innerHTML= `${dragData}`;
+    game.score++;
   } else {
     console.log('English letter not found.');
   } 
@@ -120,3 +130,27 @@ function drop(event) {
 // } else {
 //   console.log('Korean letter not found.');
 // }
+
+// Next button
+
+function next() {
+  game.questionNumber++;
+  currentGame = document.getElementById('current-game').innerText = game.questionNumber;
+
+  if (game.questionNumber <= game.totalNumberOfRounds) {
+    randomValueGenerator();
+    document.getElementById('obj1').classList.remove("dragged", "dropped");
+    document.getElementById('obj2').classList.remove("dragged", "dropped");
+    document.getElementById('obj3').classList.remove("dragged", "dropped");
+  
+    obj1.setAttribute("draggable", true);
+    obj2.setAttribute("draggable", true);
+    obj3.setAttribute("draggable", true);
+  
+  } 
+  // else {
+  //   document.getElementById('game-container').classList.add("nodisplay");
+  //   document.getElementById('results').classList.remove("nodisplay");
+  //   document.getElementById('score').innerHTML = game.score;
+  // };
+};
