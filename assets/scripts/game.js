@@ -160,8 +160,9 @@ function next() {
   
   } 
   else {
-    gameContainer = document.getElementById('game-container')
-    gameContainer.classList.add("nodisplay");
+    gameContainer = document.getElementById('game-container').classList.add("nodisplay");
+    document.getElementById('start').classList.add("nodisplay");
+    document.getElementById('game').classList.add("nodisplay");
     document.getElementById('results').classList.remove("nodisplay");
     document.getElementById('score').innerHTML = game.score;
   };
