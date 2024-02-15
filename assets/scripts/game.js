@@ -123,14 +123,13 @@ function drop(event) {
   if (objectWithEng.id === objectWithKor.id || objectWithEng2.id === objectWithKor2.id || objectWithEng3 === objectWithKor3.id) {
     event.target.classList.add("dropped");
     event.target.style.border = 'solid 4px';
+    event.target.style.fontSize = '60px';
     let draggableElement = document.getElementById(dragData);
     draggableElement.classList.add("dragged", "dropped");
     draggableElement.setAttribute("draggable", "false")
     event.target.innerHTML= source.textContent;
     game.score++;
-  } else {
-    console.log('English letter not found.');
-  } 
+  }
 };
 
 // if (objectWithEng) {
