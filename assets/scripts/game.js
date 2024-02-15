@@ -147,6 +147,9 @@ function drop(event) {
 function next() {
   game.questionNumber++;
   currentGame = document.getElementById('current-game').innerText = game.questionNumber;
+  document.getElementById('point1').classList.remove("dropped");
+  document.getElementById('point2').classList.remove("dropped");
+  document.getElementById('point3').classList.remove("dropped");
 
   if (game.questionNumber <= game.totalNumberOfRounds) {
     randomValueGenerator();
