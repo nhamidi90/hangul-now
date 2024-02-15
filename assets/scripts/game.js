@@ -103,6 +103,7 @@ function drop(event) {
   event.preventDefault();
   event.target.classList.remove("drop-hover");
   const dragData = event.dataTransfer.getData("text");
+  const source = document.getElementById(dragData)
 
   let letterToFind = data[randomIndex1].eng;
   let objectWithEng = data.find(obj => obj.eng === letterToFind);
@@ -121,12 +122,11 @@ function drop(event) {
 
   if (objectWithEng.id === objectWithKor.id || objectWithEng2.id === objectWithKor2.id || objectWithEng3 === objectWithKor3.id) {
     event.target.classList.add("dropped");
-    const draggableElement = document.getElementById(dragData);
+    let draggableElement = document.getElementById(dragData);
     draggableElement.classList.add("dragged", "dropped");
     draggableElement.setAttribute("draggable", "false")
-    event.target.innerHTML= `${dragData}`;
+    event.target.innerHTML= source.textContent;
     game.score++;
-    console.log(dragData);
   } else {
     console.log('English letter not found.');
   } 
