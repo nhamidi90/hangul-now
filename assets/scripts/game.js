@@ -109,13 +109,24 @@ function drop(event) {
   let korLetterToFind = data[randomIndex1].kor;
   let objectWithKor = data.find(obj => obj.kor === korLetterToFind);
 
-  if (objectWithEng.id === objectWithKor.id) {
+  let letterToFind2 = data[randomIndex2].eng;
+  let objectWithEng2 = data.find(obj => obj.eng === letterToFind2);
+  let korLetterToFind2 = data[randomIndex2].kor;
+  let objectWithKor2 = data.find(obj => obj.kor === korLetterToFind2);
+
+  let letterToFind3 = data[randomIndex3].eng;
+  let objectWithEng3 = data.find(obj => obj.eng === letterToFind3);
+  let korLetterToFind3 = data[randomIndex3].kor;
+  let objectWithKor3 = data.find(obj => obj.kor === korLetterToFind3);
+
+  if (objectWithEng.id === objectWithKor.id || objectWithEng2.id === objectWithKor2.id || objectWithEng3 === objectWithKor3.id) {
     event.target.classList.add("dropped");
     const draggableElement = document.getElementById(dragData);
     draggableElement.classList.add("dragged", "dropped");
     draggableElement.setAttribute("draggable", "false")
     event.target.innerHTML= `${dragData}`;
     game.score++;
+    console.log(dragData);
   } else {
     console.log('English letter not found.');
   } 
@@ -148,9 +159,9 @@ function next() {
     obj3.setAttribute("draggable", true);
   
   } 
-  // else {
-  //   document.getElementById('game-container').classList.add("nodisplay");
-  //   document.getElementById('results').classList.remove("nodisplay");
-  //   document.getElementById('score').innerHTML = game.score;
-  // };
+  else {
+    document.getElementById('game-container').classList.add("nodisplay");
+    document.getElementById('results').classList.remove("nodisplay");
+    document.getElementById('score').innerHTML = game.score;
+  };
 };
