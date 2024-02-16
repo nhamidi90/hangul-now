@@ -10,8 +10,6 @@
 
 body{
     min-height: 98vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
@@ -332,4 +330,20 @@ footer {
         padding: 0;
         justify-content: center;
     }
+
+}
+
+@media only screen and (max-width: 540px) {
+    body {
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+
+    #game-container {
+      margin-left:10px;
+      margin-right:10px;
+    }
+
 }
