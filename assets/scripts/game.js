@@ -189,16 +189,6 @@ function drop(event) {
   }
 };
 
-// if (objectWithEng) {
-//   console.log(objectWithEng.id);
-// } else {
-//   console.log('English letter not found.');
-// }if (objectWithKor) {
-//   console.log(objectWithKor.id);
-// } else {
-//   console.log('Korean letter not found.');
-// }
-
 // Next button
 
 function next() {
@@ -211,6 +201,7 @@ function next() {
   // point1.style.removeAttribute('border');
   
   // if (!(point1 || point2 || point3).includes(data[randomIndex1].kor || data[randomIndex3].kor || data[randomIndex1].kor)) {
+    // $('#confirm').modal('show');
   //   console.log("You will not get any points for unanswered questions. Do you want to skip?");
   // };
 
@@ -232,4 +223,5 @@ function next() {
     document.getElementById('results').classList.remove("nodisplay");
     document.getElementById('score').innerHTML = game.score;
   };
+
 };
