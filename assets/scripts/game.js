@@ -25,7 +25,56 @@ const data = [
     {id: 24, eng: 'h', kor: 'ㅎ'},
 ];
 
+// window.onload = function() {
 
+//   var box = document.getElementById('obj1');
+//   var box2 = document.getElementById('obj1');
+//   var box3 = document.getElementById('obj1');
+  
+//   box.addEventListener('touchmove', function(e) {
+
+//     var touchLocation = e.targetTouches[0];
+    
+//     box.style.left = touchLocation.pageX + 'px';
+//     box.style.top = touchLocation.pageY + 'px';
+//   })
+
+//   box.addEventListener('touchend', function(e) {
+
+//     var x = parseInt(box.style.left);
+//     var y = parseInt(box.style.top);
+//   })
+
+//   box2.addEventListener('touchmove', function(e) {
+
+//     var touchLocation = e.targetTouches[0];
+    
+//     box2.style.left = touchLocation.pageX + 'px';
+//     box2.style.top = touchLocation.pageY + 'px';
+//   })
+
+//   box2.addEventListener('touchend', function(e) {
+
+//     var x = parseInt(box2.style.left);
+//     var y = parseInt(box2.style.top);
+//   })
+
+//   box3.addEventListener('touchmove', function(e) {
+
+//     var touchLocation = e.targetTouches[0];
+    
+//     box3.style.left = touchLocation.pageX + 'px';
+//     box3.style.top = touchLocation.pageY + 'px';
+//   })
+
+//   box3.addEventListener('touchend', function(e) {
+
+//     var x = parseInt(box3.style.left);
+//     var y = parseInt(box3.style.top);
+//   })
+// }
+
+  
 // Game
 let game = {
 questionNumber: 1,
@@ -39,14 +88,22 @@ let randomIndex1;
 let randomIndex2;
 let randomIndex3;
 
+let obj1 = document.getElementById('obj1');
+let obj2 = document.getElementById('obj2');
+let obj3 = document.getElementById('obj3');
+
+let point1 = document.getElementById('point1')
+let point2 = document.getElementById('point2');
+let point3 = document.getElementById('point3');
+
 const randomValueGenerator = () => {
   randomIndex1 = Math.floor(Math.random() * data.length);
   randomIndex2 = Math.floor(Math.random() * data.length);
   randomIndex3 = Math.floor(Math.random() * data.length);
 
-  document.getElementById('obj1').innerHTML = data[randomIndex1].kor;
-  document.getElementById('obj2').innerHTML = data[randomIndex2].kor;
-  document.getElementById('obj3').innerHTML = data[randomIndex3].kor;
+  obj1.innerHTML = data[randomIndex1].kor;
+  obj2.innerHTML = data[randomIndex2].kor;
+  obj3.innerHTML = data[randomIndex3].kor;
 
   //shuffle english letters
   let unshuffled = [
@@ -61,9 +118,9 @@ const randomValueGenerator = () => {
   .map(({ value }) => value)
 
   //append shuffled letters to boxes
-  document.getElementById('point1').innerHTML = shuffled[0];
-  document.getElementById('point2').innerHTML = shuffled[1];
-  document.getElementById('point3').innerHTML = shuffled[2];
+  point1.innerHTML = shuffled[0];
+  point2.innerHTML = shuffled[1];
+  point3.innerHTML = shuffled[2];
 };
 
 randomValueGenerator();
@@ -147,15 +204,21 @@ function drop(event) {
 function next() {
   game.questionNumber++;
   currentGame = document.getElementById('current-game').innerText = game.questionNumber;
-  document.getElementById('point1').classList.remove("dropped");
-  document.getElementById('point2').classList.remove("dropped");
-  document.getElementById('point3').classList.remove("dropped");
+  point1.classList.remove("dropped");
+  point2.classList.remove("dropped");
+  point3.classList.remove("dropped");
+  // point1.style.removeAttribute('font-size');
+  // point1.style.removeAttribute('border');
+  
+  // if (!(point1 || point2 || point3).includes(data[randomIndex1].kor || data[randomIndex3].kor || data[randomIndex1].kor)) {
+  //   console.log("You will not get any points for unanswered questions. Do you want to skip?");
+  // };
 
   if (game.questionNumber <= game.totalNumberOfRounds) {
     randomValueGenerator();
-    document.getElementById('obj1').classList.remove("dragged", "dropped");
-    document.getElementById('obj2').classList.remove("dragged", "dropped");
-    document.getElementById('obj3').classList.remove("dragged", "dropped");
+    obj1.classList.remove("dragged", "dropped");
+    obj2.classList.remove("dragged", "dropped");
+    obj3.classList.remove("dragged", "dropped");
   
     obj1.setAttribute("draggable", true);
     obj2.setAttribute("draggable", true);
