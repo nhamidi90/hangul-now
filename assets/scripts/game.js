@@ -192,7 +192,6 @@ function next() {
   
   if (document.querySelectorAll('.droppable.dropped').length !== 3) {
     $('#confirm').modal('show');
-    console.log("You will not get any points for unanswered questions. Do you want to skip?");
     return;
   }
 
@@ -222,3 +221,31 @@ function next() {
   };
 
 };
+
+function skipQuestion() {
+  game.questionNumber++;
+  currentGame = document.getElementById('current-game').innerText = game.questionNumber;
+  point1.classList.remove("dropped");
+  point2.classList.remove("dropped");
+  point3.classList.remove("dropped");
+
+  if (game.questionNumber <= game.totalNumberOfRounds) {
+    randomValueGenerator();
+    obj1.classList.remove("dragged", "dropped");
+    obj2.classList.remove("dragged", "dropped");
+    obj3.classList.remove("dragged", "dropped");
+  
+    obj1.setAttribute("draggable", true);
+    obj2.setAttribute("draggable", true);
+    obj3.setAttribute("draggable", true);
+  
+  } 
+  else {
+    gameContainer = document.getElementById('game-container').classList.add("nodisplay");
+    document.getElementById('start').classList.add("nodisplay");
+    document.getElementById('game').classList.add("nodisplay");
+    document.getElementById('results').classList.remove("nodisplay");
+    document.getElementById('score').innerHTML = game.score;
+  };
+
+}
