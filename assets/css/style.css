@@ -283,6 +283,7 @@ footer {
     border-radius: 20px;
     border: 4px solid;
     font-size: 60px;
+    font-family: 'gaegu', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -296,6 +297,7 @@ footer {
     border-radius: 20px;
     border: 4px dashed;
     font-size: 40px;
+    font-family: 'gaegu', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
