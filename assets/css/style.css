@@ -270,9 +270,11 @@ footer {
     opacity: 0.1;
 }
 
-.dropped {
+#point1.dropped, #point2.dropped, #point3.dropped {
     pointer-events: none;
     background-image: url(../images/card-front.png);
+    border: 4px solid;
+    font-size: 60px;
 }
 
 #obj1, #obj2, #obj3 {
