@@ -8,10 +8,6 @@
     box-sizing: border-box;
 }
 
-body{
-    min-height: 98vh;
-}
-
 .container {
     display: flex;
     max-width: 70rem;
