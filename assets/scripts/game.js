@@ -189,16 +189,18 @@ function drop(event) {
 // Next button
 
 function next() {
+  
+  if (document.querySelectorAll('.droppable.dropped').length !== 3) {
+    $('#confirm').modal('show');
+    console.log("You will not get any points for unanswered questions. Do you want to skip?");
+    return;
+  }
+
   game.questionNumber++;
   currentGame = document.getElementById('current-game').innerText = game.questionNumber;
   point1.classList.remove("dropped");
   point2.classList.remove("dropped");
   point3.classList.remove("dropped");
-  
-  // if (!(point1 || point2 || point3).includes(data[randomIndex1].kor || data[randomIndex3].kor || data[randomIndex1].kor)) {
-    // $('#confirm').modal('show');
-  //   console.log("You will not get any points for unanswered questions. Do you want to skip?");
-  // };
 
   if (game.questionNumber <= game.totalNumberOfRounds) {
     randomValueGenerator();
