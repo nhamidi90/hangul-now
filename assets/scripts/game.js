@@ -101,9 +101,17 @@ const randomValueGenerator = () => {
   randomIndex2 = Math.floor(Math.random() * data.length);
   randomIndex3 = Math.floor(Math.random() * data.length);
 
-  obj1.innerHTML = data[randomIndex1].kor;
-  obj2.innerHTML = data[randomIndex2].kor;
-  obj3.innerHTML = data[randomIndex3].kor;
+  korean1 = data[randomIndex1].kor
+  obj1.innerHTML = korean1;
+  obj1.setAttribute("value",korean1);
+
+  korean2 = data[randomIndex2].kor;
+  obj2.innerHTML = korean2;
+  obj2.setAttribute("value", korean2);
+
+  korean3 = data[randomIndex3].kor;
+  obj3.innerHTML = korean3;
+  obj3.setAttribute("value", korean3);
 
   //shuffle english letters
   let unshuffled = [
@@ -161,32 +169,21 @@ function drop(event) {
   event.target.classList.remove("drop-hover");
   const dragData = event.dataTransfer.getData("text");
   const source = document.getElementById(dragData)
+  let sourceValue= source.getAttribute("value");
+  let targetValue = event.srcElement.innerText;
+ 
+  let matchedData = data.find(obj => {
+    return obj.kor === sourceValue && obj.eng === targetValue;
+  }) 
 
-  let letterToFind = data[randomIndex1].eng;
-  let objectWithEng = data.find(obj => obj.eng === letterToFind);
-  let korLetterToFind = data[randomIndex1].kor;
-  let objectWithKor = data.find(obj => obj.kor === korLetterToFind);
-
-  let letterToFind2 = data[randomIndex2].eng;
-  let objectWithEng2 = data.find(obj => obj.eng === letterToFind2);
-  let korLetterToFind2 = data[randomIndex2].kor;
-  let objectWithKor2 = data.find(obj => obj.kor === korLetterToFind2);
-
-  let letterToFind3 = data[randomIndex3].eng;
-  let objectWithEng3 = data.find(obj => obj.eng === letterToFind3);
-  let korLetterToFind3 = data[randomIndex3].kor;
-  let objectWithKor3 = data.find(obj => obj.kor === korLetterToFind3);
-
-  if (objectWithEng.id === objectWithKor.id || objectWithEng2.id === objectWithKor2.id || objectWithEng3 === objectWithKor3.id) {
+  if (matchedData) {
     event.target.classList.add("dropped");
-    event.target.style.border = 'solid 4px';
-    event.target.style.fontSize = '60px';
     let draggableElement = document.getElementById(dragData);
     draggableElement.classList.add("dragged", "dropped");
     draggableElement.setAttribute("draggable", "false")
     event.target.innerHTML= source.textContent;
     game.score++;
-  }
+  } 
 };
 
 // Next button
@@ -197,8 +194,6 @@ function next() {
   point1.classList.remove("dropped");
   point2.classList.remove("dropped");
   point3.classList.remove("dropped");
-  // point1.style.removeAttribute('font-size');
-  // point1.style.removeAttribute('border');
   
   // if (!(point1 || point2 || point3).includes(data[randomIndex1].kor || data[randomIndex3].kor || data[randomIndex1].kor)) {
     // $('#confirm').modal('show');
