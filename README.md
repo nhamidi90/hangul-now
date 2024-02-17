@@ -4,7 +4,7 @@ Hangul now is an interactive website for visitors to learn the Korean alphabet a
 
 ![Screenshot of the website on different devices]()
 
-The live link can be found [here]()
+The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
 ## User stories
 
@@ -88,21 +88,21 @@ All information on testing can be found on [TESTING.md](TESTING.md)
 ### Deployment to GitHub Pages
 
 The site was deployed to GitHub pages. To deploy this site: 
-  * In the [GitHub repository](), navigate to the Settings tab
+  * In the [GitHub repository](https://github.com/nhamidi90/hangul-now), navigate to the Settings tab
   * Select the **pages** link on the left hand side under *Code and automation*
   * Under *Source*, ensure **Deploy from branch** is selected
   * Under *Branch*, select **main** then **save**
   * The page will automatically refresh and provide a link to your site indicating successful deployment.
 
-The live link can be found [here]()
+The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
 ### Local Deployment
 
 * To make a local copy of this project, you can clone the repository by typing the following command into your IDE terminal:
 
- `git clone `
+ `git clone https://github.com/nhamidi90/hangul-now.git`
 
-- Alternatively, to open the workspace in Gitpod, you can [click here]()
+- Alternatively, to open the workspace in Gitpod, you can [click here](https://gitpod.io/#https://github.com/nhamidi90/hangul-now)
 
 ## Future improvements
 
