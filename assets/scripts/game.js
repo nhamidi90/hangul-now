@@ -24,56 +24,6 @@ const data = [
     {id: 23, eng: 'p', kor: 'ㅍ'},
     {id: 24, eng: 'h', kor: 'ㅎ'},
 ];
-
-// window.onload = function() {
-
-//   var box = document.getElementById('obj1');
-//   var box2 = document.getElementById('obj1');
-//   var box3 = document.getElementById('obj1');
-  
-//   box.addEventListener('touchmove', function(e) {
-
-//     var touchLocation = e.targetTouches[0];
-    
-//     box.style.left = touchLocation.pageX + 'px';
-//     box.style.top = touchLocation.pageY + 'px';
-//   })
-
-//   box.addEventListener('touchend', function(e) {
-
-//     var x = parseInt(box.style.left);
-//     var y = parseInt(box.style.top);
-//   })
-
-//   box2.addEventListener('touchmove', function(e) {
-
-//     var touchLocation = e.targetTouches[0];
-    
-//     box2.style.left = touchLocation.pageX + 'px';
-//     box2.style.top = touchLocation.pageY + 'px';
-//   })
-
-//   box2.addEventListener('touchend', function(e) {
-
-//     var x = parseInt(box2.style.left);
-//     var y = parseInt(box2.style.top);
-//   })
-
-//   box3.addEventListener('touchmove', function(e) {
-
-//     var touchLocation = e.targetTouches[0];
-    
-//     box3.style.left = touchLocation.pageX + 'px';
-//     box3.style.top = touchLocation.pageY + 'px';
-//   })
-
-//   box3.addEventListener('touchend', function(e) {
-
-//     var x = parseInt(box3.style.left);
-//     var y = parseInt(box3.style.top);
-//   })
-// }
-
   
 // Game
 let game = {
