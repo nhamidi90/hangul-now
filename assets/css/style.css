@@ -276,6 +276,14 @@ footer {
     font-size: 60px;
 }
 
+.box-wrap {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #obj1, #obj2, #obj3 {
     width: 140px;
     height: 140px;
@@ -288,6 +296,7 @@ footer {
     align-items: center;
     justify-content: center;
     cursor: grab;
+    position: absolute;
 }
 
 #point1, #point2, #point3 {
