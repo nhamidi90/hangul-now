@@ -80,6 +80,12 @@ main {
     transform: translateY(4px);
   }
 
+.menu-button {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(151, 142, 159);
+}
+
 /* ----------------Index Page */
 
 .index-image {
@@ -164,10 +170,6 @@ footer {
     margin: 50px auto;
     padding-left: 50px;
     width: 100%
-}
-
-#consonants-container, #dc-container {
-    padding: 0;
 }
 
 .nodisplay {
@@ -325,6 +327,12 @@ footer {
 #score {
     color: red;
 }
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
 /* ---------------- Media Queries */
 
 @media only screen and (max-width: 480px) {
@@ -345,6 +353,20 @@ footer {
         justify-content: center;
     }
 
+    #cv-container {
+        padding: 0;
+        justify-content: center;
+    }
+
+    #consonants-container {
+        padding: 0;
+        justify-content: center;
+    }
+
+    #dc-container {
+        padding: 0;
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 540px) {
