@@ -166,6 +166,10 @@ footer {
     width: 100%
 }
 
+#consonants-container, #dc-container {
+    padding: 0;
+}
+
 .nodisplay {
     display: none !important;
 }
