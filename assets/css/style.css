@@ -143,10 +143,19 @@ img {
 }
 
 footer {
-    width: 100%;
-    height: 50px;
     font-size: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-row {
+    width:600px;
+}
+
+.footer-col {
+    padding-top: 10px;
 }
 
 .footer-icons {
