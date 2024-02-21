@@ -358,27 +358,13 @@ footer {
 
 }
 
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 435px) {
 
-    #vowels-container {
+    #vowels-container, #cv-container, #consonants-container, #dc-container {
         padding: 0;
         justify-content: center;
     }
 
-    #cv-container {
-        padding: 0;
-        justify-content: center;
-    }
-
-    #consonants-container {
-        padding: 0;
-        justify-content: center;
-    }
-
-    #dc-container {
-        padding: 0;
-        justify-content: center;
-    }
 }
 
 @media only screen and (max-width: 540px) {
