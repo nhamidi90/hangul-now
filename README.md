@@ -9,13 +9,21 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 ## User stories
 
 ### First time visitor goals:
-
+*	I want to learn how to read Korean so that I can be fluent in the Korean language
+*	I want the information to be presented in bite size pieces so that I can digest the information easier
+*	I want the website to be interactive so that it is fun for me
+*	I want the website to give me feedback so I know what I have learnt is correct
+*	I want to hear the letters so I can learn correct pronunciation
+*	I want the site to be encouraging enough for me to consider learning more
 
 ### Returning visitor goals:
-
+*	I want the site to be easy to navigate so I can quickly find what I want to revise
+*	I want to check their social media to see if they have any other learning resources or information
 
 ### Frequent visitor goals:
-
+*	I want to keep revising the alphabet so that I become confident with reading Korean
+*	I want to listen to the pronunciation of the letters so that I can practice pronouncing them correctly
+*	I want to test myself so that I can see that my learning is progressing
 
 ## Features
 
