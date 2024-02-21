@@ -96,19 +96,19 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 ## Wireframes
 
 ### Desktop screen
-* [Home]()
-* [Learn the Alphabet]()
-* [Test Yourself]()
+* [Home](assets/readme/wireframes/desktop-index.png)
+* [Learn the Alphabet](assets/readme/wireframes/desktop-letters.png)
+* [Test Yourself](assets/readme/wireframes/desktop-game.png)
 
 ### Tablet screen (small and large)
-* [Home]()
-* [Learn the Alphabet]()
-* [Test Yourself]()
+* [Home](assets/readme/wireframes/tablet-index.png)
+* [Learn the Alphabet](assets/readme/wireframes/tablet-letters.png)
+* [Test Yourself](assets/readme/wireframes/tablet-game.png)
 
 ### Mobile screen
-* [Home]()
-* [Learn the Alphabet]()
-* [Test Yourself]()
+* [Home](assets/readme/wireframes/mobile-index.png)
+* [Learn the Alphabet](assets/readme/wireframes/mobile-letters.png)
+* [Test Yourself](assets/readme/wireframes/mobile-game.png)
 
 ## Testing
 
