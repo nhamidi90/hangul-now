@@ -27,32 +27,55 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
 ## Features
 
-### Navbar
-
-
 ### Footer
 
 * All pages will include the footer
+* The footer includes links to Facebook, Tiktok and Instagram which open in a new page
+
+![Screenshot of Vowels - Korean side of flashcards](assets/readme/footer.png)
 
 
 ### Home page
 
-* The page is responsive to screen size
+* The 'Learn the letters' button links to the page where users can learn the korean alphabet
+* The 'Test yourself' button leads users to the game page where they can test what they have learnt
 
-![Screenshot of index.html]()
+![Screenshot of index page](assets/readme/index-page.png)
 
 ### Learn the Letters
 
-* The page is responsive to screen size
+* This page includes flashcards of the korean alphabet with a flip effect and audio button under each flashcard to hear the letter
+* One side shows the korean letter
+* Users can toggle between vowels and consonants
+* After flipping, the english transliteration is displayed
+* The top displays the logo and a home button. Both lead to the index page
 
-![Screenshot of letters.html]()
+![Screenshot of Vowels - Korean side of flashcards](assets/readme/vowels-kor.png)
+![Screenshot of Vowels- English side of flashcards](assets/readme/vowels-eng.png)
+![Screenshot of Consonants - Korean side of flashcards](assets/readme/consonants-kor.png)
+![Screenshot of Consonants- English side of flashcards](assets/readme/consonants-eng.png)
 
 ### Test Yourself
 
-* The page is responsive to screen size
+* This page displays the game area where users have to match the korean letter to the correct english equivalent by dragging and dropping
+* The top displays the rules button and a home button
+* There are effects to show when the user is moving the korean letter into the drop zone and when the letter is dropped
+* They can then click the button to move to the next round
+* Letters are randomly generated and the english boxes are shuffled each round
+* If the user leaves any unanswered questions, they will be notified and given the option to answer it or skip to the next question
+* Once the user has finished 10 rounds, they will be taken to the results page
+* A plugin is used to enable drag and drop for touchscreen
 
-![Screenshot of game.html]()
+![Screenshot of game page](assets/readme/game-page.png)
+![Screenshot of rules modal](assets/readme/rules-modal.png)
+![Screenshot of skip question modal](assets/readme/skip-modal.png)
 
+### Results page
+
+* Once users have finished the game they will be directed to the results page with their score
+* They have the option to return home or play again
+
+![Screenshot of results page](assets/readme/results-page.png)
 
 ## Technologies Used
 
