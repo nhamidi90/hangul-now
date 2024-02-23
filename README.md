@@ -137,41 +137,39 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
 ## Future improvements
 
+* I would like to add a section for users to learn about how to form syllabic blocks used in korean writing so they can learn how to read words
+* I would then add explanations on how positioning of some letters affects pronunciation
+* I would like to use audio spoken by native speakers as opposed to text to speech as it is more helpful in learning
 
 ## Credits
 
 ### Content
 
+Hangul letters were referenced from [Fluent in korean](https://fluentinkorean.com/korean-alphabet-2/)
+
 ### Media
 
-https://www.freepik.com/premium-photo/watercolor-floral-wreath-background_79576606.htm
-
-https://www.freepik.com/premium-photo/watercolor-floral-wreath-background_79576609.htm
-
-https://pixabay.com/vectors/audio-sound-speaker-button-voice-150191/
-Homepage 
+* Flashcards - [korean background](https://www.freepik.com/premium-photo/watercolor-floral-wreath-background_79576606.htm)
+* Flashcards - [english background](https://www.freepik.com/premium-photo/watercolor-floral-wreath-background_79576609.htm)
+* [Audio button image](https://pixabay.com/vectors/audio-sound-speaker-button-voice-150191/)
 
 ### Tools
 
+* [Speakatoo](https://www.speakatoo.com/) text to speech was used create the audio for the flashcards
+* [Bernardo Castilho's](https://github.com/Bernardo-Castilho/dragdroptouch) plugin was used to allow drag and drop to work on touchscreens
 
 ### Code
 
-* [W3 Schools](https://www.w3schools.com/) and [MDN web docs](https://developer.mozilla.org/en-US/) 
-
-
+* [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image) were used to look up syntax such as adding images to the page via javascript
 * [Fontawesome](https://fontawesome.com/) gave me the icons used in the footer and navbar
-
-<!-- All the icons I used
-<i class="fa-brands fa-facebook"></i>
-<i class="fa-brands fa-tiktok footer-icons"></i>
-<i class="fa-brands fa-instagram"></i>
--->
-
-
-* [Bootstrap](https://getbootstrap.com/)
-
+* [Arjun Khara's](https://www.youtube.com/watch?v=OV8MVmtgmoY) walkthough showed me how to do the flipcard effect
+* The click and shadow effects of the buttons were taken from [W3Schools](https://www.w3schools.com/css/css3_buttons.asp)
+* This video tutorial byt [The wheelchair guy](https://www.youtube.com/watch?v=3xlws5og44U) was followed to add audio to the page via javascript 
+* [Stack overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) showed me how to shuffle the english letters for the drag and drop game and also [open a modal using jQuery](https://stackoverflow.com/questions/30396803/how-to-open-a-modal-in-javascript-instead-of-manual-click)
+* This walkthrough by [Coding journey](https://www.youtube.com/watch?v=7HUCAYMylCQ) showed me how to use the drag and drop API 
 
 ## Acknowledgements
 
 * Code Institute - This website would not have been possible without their tutorials and walkthroughs. Tutors and slack community gave me help when I had difficulty
 * Julie Konovalova - My mentor who has given me a lot of guidance throughout this project
+* Falah Hamidi - My brother who helped me with the logic of matching correct drag and drop elements
