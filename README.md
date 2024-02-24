@@ -2,7 +2,7 @@
 
 Hangul now is an interactive website for visitors to learn the Korean alphabet and how to form letters into syllabic blocks. Visitors can toggle between the Korean and Romanisation of each letter via the flashcards and listen to how it sounds. They can also have a go at playing the drag and drop game where they have to match the correct Korean letter to its sound.
 
-![Screenshot of the website on different devices]()
+![Screenshot of the website on different devices](assets/readme/mockup.png)
 
 The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
