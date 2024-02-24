@@ -299,8 +299,7 @@ for (let i = 0; i < card2.length; i++) {
     card2[i].addEventListener('click', flip);
 }
 
-function flip(event) {
+function flip() {
     this.classList.toggle("flipcard");
 }
-
 
