@@ -14,11 +14,25 @@ Chrome:
 Opera:
 ![Screenshot of website on opera](assets/readme/opera-screenshot.png)
 
-* The responsiveness of the site was also tested using chrome devtools:
+* The responsiveness of the site was also tested using chrome devtools. Devices tested include:
 
-Index page:
-Learning letters:
-Test yourself:
+    - iPhone SE
+    - iPhone XR
+    - iPhone 12 Pro
+    - Pixel 5
+    - Samsung Galaxy S8+
+    - Samsung Galaxy S20 Ultra
+    - iPad Mini
+    - iPad Air
+    - Surface Pro 7
+    - Surface Duo
+    - Galaxy Fold
+    - Samsung Galaxy A51/71
+    - Nest Hub
+    - Nest Hub Max
+    - Laptop
+
+I personally tested the website on Dell Inspiron 5000 laptop and OnePlus Nord 2T mobile
 
 ## Manual testing
 
@@ -53,7 +67,16 @@ Test yourself:
 
 ### HTML
 
+The website passed all tests using the [W3C HTML Validator](https://validator.w3.org/nu/) tool
+
+![Validator results for index page](assets/readme/validators/htmlvalidator-index.png)
+
+![Validator results for letters page](assets/readme/validators/htmlvalidator-letters.png)
+
+![Validator results for game page](assets/readme/validators/htmlvalidator-game.png)
+
 ### CSS
+
 
 ## Lighthouse report
 
@@ -65,3 +88,10 @@ Test yourself:
 
 ## Bugs
 
+- While creating the flashcards, it was difficult to get the layout right and the flip funtion to work as the tutorial I followed only displayed one card per page whereas I had multiple. To get around this I realised I had to place the card inside another div and set the position to abolute.
+
+- While creating the drag and drop game, I had trouble with transferring the data of the korean letter to the drop zones. It would display the id of the draggable elements. To get around this I set it to another variable and set the innerText of that variable.
+
+- I also had the problem of matching the korean letters to its english equivalent. To solve this I set the attribute for all draggable elements and getting the value for that. I also had to get the value of the target element and store that in a variable so that I can use the find method to compare whether thay are from the same object.
+
+- For the game page there was a problem of it zooming in while on smaller devices causing a scroll. Looking on [Stack overflow](https://stackoverflow.com/questions/14272420/webpage-starts-zoomed-in-on-mobile-devices) gave me the metadata to add to the head tag.
