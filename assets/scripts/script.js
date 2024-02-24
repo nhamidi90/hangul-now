@@ -71,7 +71,7 @@ for (let i = 0; i < allCons; i++) {
     cardfront.innerHTML = korCons[i];
     cardfront.classList.add("card-front");
     conCardContainer[i].appendChild(cardfront);
-};
+}
 
 let engCons = consonants.map(consonant => consonant.eng);
 let allEngCons = engCons.length;
@@ -81,7 +81,7 @@ for (let i = 0; i < allEngCons; i++) {
     cardBack.innerHTML = engCons[i];
     cardBack.classList.add("card-back");
     conCardContainer[i].appendChild(cardBack);
-};
+}
 
 // Consonants audio
 
@@ -99,7 +99,7 @@ for (let i = 0; i < conAudio; i++) {
         audio.play();
     }
     play.addEventListener('click', playConsonant);
-};
+}
 
 // Double consonants header
 
@@ -127,7 +127,7 @@ for (let i = 0; i < allDoubCons; i++) {
     cardFront.innerHTML = doubCons[i];
     cardFront.classList.add("card-front");
     dcCardCont[i].appendChild(cardFront);
-};
+}
 
 let engDoubCons = doubleConsonants.map(engDoubCon => engDoubCon.eng);
 let allEngDoubCons = engDoubCons.length;
@@ -137,7 +137,7 @@ for (let i = 0; i < allEngDoubCons; i++) {
     cardBack.innerHTML = engDoubCons[i];
     cardBack.classList.add("card-back");
     dcCardCont[i].appendChild(cardBack);
-};
+}
 
 // Double consonants audio
 
@@ -155,7 +155,7 @@ for (let i = 0; i < dcAudio; i++) {
         audio.play();
     }
     play.addEventListener('click', playdoubCon);
-};
+}
 
 // Add vowels to page
 
@@ -177,7 +177,7 @@ for (let i = 0; i < allVowels; i++) {
     cardfront.innerHTML = korVowels[i];
     cardfront.classList.add("card-front");
     cardContainer[i].appendChild(cardfront);
-};
+}
 
 let engVowels = vowels.map(vowel => vowel.eng);
 let allEngVowels = engVowels.length;
@@ -187,7 +187,7 @@ for (let i = 0; i < allEngVowels; i++) {
     cardBack.innerHTML = engVowels[i];
     cardBack.classList.add("card-back");
     cardContainer[i].appendChild(cardBack);
-};
+}
 
 // Vowels header
 
@@ -211,7 +211,7 @@ for (let i = 0; i < vowelAudio; i++) {
         audio.play();
     }
     play.addEventListener('click', playVowel);
-};
+}
 
 //Add compound vowels to page
 
@@ -233,7 +233,7 @@ for (let i = 0; i < allCompoundVowels; i++) {
     cardFront.innerHTML = korCompoundVowels[i];
     cardFront.classList.add("card-front");
     compoundCard[i].appendChild(cardFront);
-};
+}
 
 let engCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.eng);
 let allEngCompVowels = engCompoundVowels.length;
@@ -243,7 +243,7 @@ for (let i = 0; i < allEngCompVowels; i++) {
     cardBack.innerHTML = engCompoundVowels[i];
     cardBack.classList.add("card-back");
     compoundCard[i].appendChild(cardBack);
-};
+}
 
 
 // Compound vowels audio
@@ -262,7 +262,7 @@ for (let i = 0; i < CVowelsAudio; i++) {
         audio.play();
     }
     play.addEventListener('click', playCV);
-};
+}
 
 //button function
 
@@ -274,7 +274,7 @@ function conClick() {
     cvContainer.classList.add("nodisplay");
     consContainer.classList.remove("nodisplay");
     dcContainer.classList.remove("nodisplay");
-};
+}
 
 let vowelButton = document.getElementById('vowels-button');
 vowelButton.addEventListener('click', vowelClick);
@@ -284,7 +284,7 @@ function vowelClick() {
     cvContainer.classList.remove("nodisplay");
     consContainer.classList.add("nodisplay");
     dcContainer.classList.add("nodisplay");
-};
+}
 
 
 //flipcard function
@@ -292,13 +292,15 @@ function vowelClick() {
 let card = document.getElementsByClassName('card');
 for (let i = 0; i < card.length; i++) {
     card[i].addEventListener('click', flip);
-};
+}
 
 let card2 = document.getElementsByClassName('card2');
 for (let i = 0; i < card2.length; i++) {
     card2[i].addEventListener('click', flip);
-};
+}
 
 function flip(event) {
     this.classList.toggle("flipcard");
-};
+}
+
+
