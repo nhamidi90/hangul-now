@@ -84,6 +84,9 @@ main {
     width: 200px;
     height: 50px;
     background-color: rgb(151, 142, 159);
+    font-family: "rubik", sans-serif;
+    border-radius: 20px;
+    margin-left: 20px;
 }
 
 /* ----------------Index Page */
@@ -116,7 +119,11 @@ main {
     padding-right: 20px;
 }
 
-button {
+.home-button {
+    padding-top: 15px;
+}
+
+.main-button {
     font-family: "rubik", sans-serif;
     width: 250px;
     height: 60px;
@@ -128,11 +135,13 @@ button {
     background-color: rgb(224, 216, 205);
 }
 
-button:hover {
+.main-button:hover {
     background-color: cadetblue;
+    border-color: cadetblue;
+    border: 3px solid;
 }
 
-.button:active {
+.main-button:active {
     background-color: #84d5c0;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
