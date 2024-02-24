@@ -120,7 +120,7 @@ function drop(event) {
   const dragData = event.dataTransfer.getData("text");
   const source = document.getElementById(dragData)
   let sourceValue= source.getAttribute("value");
-  let targetValue = event.srcElement.innerText;
+  let targetValue = event.target.innerText;
  
   let matchedData = data.find(obj => {
     return obj.kor === sourceValue && obj.eng === targetValue;
