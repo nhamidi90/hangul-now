@@ -77,6 +77,17 @@ The website passed all tests using the [W3C HTML Validator](https://validator.w3
 
 ### CSS
 
+The website passed all tests using the [W3C CSS validator](https://jigsaw.w3.org/css-validator/) tool
+
+![Validator results for CSS](assets/readme/validators/css-validator.png)
+
+### Javascript
+
+The results for javascript validation using the official [JSHint](https://jshint.com/) validator is as follows:
+
+![Validator results for script.js](assets/readme/validators/js-script.png)
+
+![Validator results for game.js](assets/readme/validators/js-game.png)
 
 ## Lighthouse report
 
