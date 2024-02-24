@@ -5,6 +5,21 @@
 * The website was tested on three browsers to determine correct appearance, responsiveness and to ensure it works well
 * It was tested on Chrome, Firefox and Opera
 
+Firefox:
+![Screenshot of website on firefox](assets/readme/firefox-screenshot.png)
+
+Chrome:
+![Screenshot of website on chrome](assets/readme/chrome-screenshot.png)
+
+Opera:
+![Screenshot of website on opera](assets/readme/opera-screenshot.png)
+
+* The responsiveness of the site was also tested using chrome devtools:
+
+Index page:
+Learning letters:
+Test yourself:
+
 ## Manual testing
 
 |feature	|action	|expected result|	tested	|passed	|comments|
