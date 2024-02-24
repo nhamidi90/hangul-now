@@ -1,36 +1,131 @@
-const data = [
-    {id: 1, eng: 'a', kor: 'ㅏ'},
-    {id: 2, eng: 'ya', kor: 'ㅑ'},
-    {id: 3, eng: 'eo', kor: 'ㅓ'},
-    {id: 4, eng: 'yeo', kor: 'ㅕ'},
-    {id: 5, eng: 'o', kor: 'ㅗ'},
-    {id: 6, eng: 'yo', kor: 'ㅛ'},
-    {id: 7, eng: 'u', kor: 'ㅜ'},
-    {id: 8, eng: 'yoo', kor: 'ㅠ'},
-    {id: 9, eng: 'eu', kor: 'ㅡ'},
-    {id: 10, eng: 'i', kor: 'ㅣ'},
-    {id: 11, eng: 'gk', kor: 'ㄱ'},
-    {id: 12, eng: 'n', kor: 'ㄴ'},
-    {id: 13, eng: 'dt', kor: 'ㄷ'},
-    {id: 14, eng: 'r/l', kor: 'ㄹ'},
-    {id: 15, eng: 'm', kor: 'ㅁ'},
-    {id: 16, eng: 'bp', kor: 'ㅂ'},
-    {id: 17, eng: 's', kor: 'ㅅ'},
-    {id: 18, eng: '-/ng', kor: 'ㅇ'},
-    {id: 19, eng: 'j', kor: 'ㅈ'},
-    {id: 20, eng: 'ch', kor: 'ㅊ'},
-    {id: 21, eng: 'k', kor: 'ㅋ'},
-    {id: 22, eng: 't', kor: 'ㅌ'},
-    {id: 23, eng: 'p', kor: 'ㅍ'},
-    {id: 24, eng: 'h', kor: 'ㅎ'},
+const data = [{
+    id: 1,
+    eng: 'a',
+    kor: 'ㅏ'
+  },
+  {
+    id: 2,
+    eng: 'ya',
+    kor: 'ㅑ'
+  },
+  {
+    id: 3,
+    eng: 'eo',
+    kor: 'ㅓ'
+  },
+  {
+    id: 4,
+    eng: 'yeo',
+    kor: 'ㅕ'
+  },
+  {
+    id: 5,
+    eng: 'o',
+    kor: 'ㅗ'
+  },
+  {
+    id: 6,
+    eng: 'yo',
+    kor: 'ㅛ'
+  },
+  {
+    id: 7,
+    eng: 'u',
+    kor: 'ㅜ'
+  },
+  {
+    id: 8,
+    eng: 'yoo',
+    kor: 'ㅠ'
+  },
+  {
+    id: 9,
+    eng: 'eu',
+    kor: 'ㅡ'
+  },
+  {
+    id: 10,
+    eng: 'i',
+    kor: 'ㅣ'
+  },
+  {
+    id: 11,
+    eng: 'gk',
+    kor: 'ㄱ'
+  },
+  {
+    id: 12,
+    eng: 'n',
+    kor: 'ㄴ'
+  },
+  {
+    id: 13,
+    eng: 'dt',
+    kor: 'ㄷ'
+  },
+  {
+    id: 14,
+    eng: 'r/l',
+    kor: 'ㄹ'
+  },
+  {
+    id: 15,
+    eng: 'm',
+    kor: 'ㅁ'
+  },
+  {
+    id: 16,
+    eng: 'bp',
+    kor: 'ㅂ'
+  },
+  {
+    id: 17,
+    eng: 's',
+    kor: 'ㅅ'
+  },
+  {
+    id: 18,
+    eng: '-/ng',
+    kor: 'ㅇ'
+  },
+  {
+    id: 19,
+    eng: 'j',
+    kor: 'ㅈ'
+  },
+  {
+    id: 20,
+    eng: 'ch',
+    kor: 'ㅊ'
+  },
+  {
+    id: 21,
+    eng: 'k',
+    kor: 'ㅋ'
+  },
+  {
+    id: 22,
+    eng: 't',
+    kor: 'ㅌ'
+  },
+  {
+    id: 23,
+    eng: 'p',
+    kor: 'ㅍ'
+  },
+  {
+    id: 24,
+    eng: 'h',
+    kor: 'ㅎ'
+  },
 ];
-  
+
 // Game
 let game = {
-questionNumber: 1,
-score: 0,
-totalNumberOfRounds: 10,
-}
+  questionNumber: 1,
+  score: 0,
+  totalNumberOfRounds: 10,
+};
 
 //generate random letters and append to boxes
 
@@ -42,7 +137,7 @@ let obj1 = document.getElementById('obj1');
 let obj2 = document.getElementById('obj2');
 let obj3 = document.getElementById('obj3');
 
-let point1 = document.getElementById('point1')
+let point1 = document.getElementById('point1');
 let point2 = document.getElementById('point2');
 let point3 = document.getElementById('point3');
 
@@ -51,29 +146,34 @@ const randomValueGenerator = () => {
   randomIndex2 = Math.floor(Math.random() * data.length);
   randomIndex3 = Math.floor(Math.random() * data.length);
 
-  korean1 = data[randomIndex1].kor
+  let korean1 = data[randomIndex1].kor;
   obj1.innerHTML = korean1;
-  obj1.setAttribute("value",korean1);
+  obj1.setAttribute("value", korean1);
 
-  korean2 = data[randomIndex2].kor;
+  let korean2 = data[randomIndex2].kor;
   obj2.innerHTML = korean2;
   obj2.setAttribute("value", korean2);
 
-  korean3 = data[randomIndex3].kor;
+  let korean3 = data[randomIndex3].kor;
   obj3.innerHTML = korean3;
   obj3.setAttribute("value", korean3);
 
   //shuffle english letters
   let unshuffled = [
-  data[randomIndex1].eng,
-  data[randomIndex2].eng,
-  data[randomIndex3].eng
+    data[randomIndex1].eng,
+    data[randomIndex2].eng,
+    data[randomIndex3].eng
   ];
 
   let shuffled = unshuffled
-  .map(value => ({ value, sort: Math.random() }))
-  .sort((a, b) => a.sort - b.sort)
-  .map(({ value }) => value)
+    .map(value => ({
+      value,
+      sort: Math.random()
+    }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({
+      value
+    }) => value);
 
   //append shuffled letters to boxes
   point1.innerHTML = shuffled[0];
@@ -100,53 +200,53 @@ droppable.forEach(elem => {
 
 function dragStart(event) {
   event.dataTransfer.setData("text", event.target.id);
-};
+}
 
 function dragEnter(event) {
   event.target.classList.add("drop-hover");
-};
+}
 
 function dragLeave(event) {
   event.target.classList.remove("drop-hover");
-};
+}
 
 function dragOver(event) {
   event.preventDefault();
-};
+}
 
 function drop(event) {
   event.preventDefault();
   event.target.classList.remove("drop-hover");
   const dragData = event.dataTransfer.getData("text");
-  const source = document.getElementById(dragData)
-  let sourceValue= source.getAttribute("value");
+  const source = document.getElementById(dragData);
+  let sourceValue = source.getAttribute("value");
   let targetValue = event.target.innerText;
- 
+
   let matchedData = data.find(obj => {
     return obj.kor === sourceValue && obj.eng === targetValue;
-  }) 
+  });
 
   if (matchedData) {
     event.target.classList.add("dropped");
     let draggableElement = document.getElementById(dragData);
     draggableElement.classList.add("dragged", "dropped");
-    draggableElement.setAttribute("draggable", "false")
-    event.target.innerHTML= source.textContent;
+    draggableElement.setAttribute("draggable", "false");
+    event.target.innerHTML = source.textContent;
     game.score++;
-  } 
-};
+  }
+}
 
 // Next button
 
 function next() {
-  
+
   if (document.querySelectorAll('.droppable.dropped').length !== 3) {
     $('#confirm').modal('show');
     return;
   }
 
   game.questionNumber++;
-  currentGame = document.getElementById('current-game').innerText = game.questionNumber;
+  let currentGame = document.getElementById('current-game').innerText = game.questionNumber;
   point1.classList.remove("dropped");
   point2.classList.remove("dropped");
   point3.classList.remove("dropped");
@@ -156,25 +256,24 @@ function next() {
     obj1.classList.remove("dragged", "dropped");
     obj2.classList.remove("dragged", "dropped");
     obj3.classList.remove("dragged", "dropped");
-  
+
     obj1.setAttribute("draggable", true);
     obj2.setAttribute("draggable", true);
     obj3.setAttribute("draggable", true);
-  
-  } 
-  else {
-    gameContainer = document.getElementById('game-container').classList.add("nodisplay");
+
+  } else {
+    let gameContainer = document.getElementById('game-container').classList.add("nodisplay");
     document.getElementById('start').classList.add("nodisplay");
     document.getElementById('game').classList.add("nodisplay");
     document.getElementById('results').classList.remove("nodisplay");
     document.getElementById('score').innerHTML = game.score;
-  };
+  }
 
-};
+}
 
 function skipQuestion() {
   game.questionNumber++;
-  currentGame = document.getElementById('current-game').innerText = game.questionNumber;
+  let currentGame = document.getElementById('current-game').innerText = game.questionNumber;
   point1.classList.remove("dropped");
   point2.classList.remove("dropped");
   point3.classList.remove("dropped");
@@ -184,18 +283,17 @@ function skipQuestion() {
     obj1.classList.remove("dragged", "dropped");
     obj2.classList.remove("dragged", "dropped");
     obj3.classList.remove("dragged", "dropped");
-  
+
     obj1.setAttribute("draggable", true);
     obj2.setAttribute("draggable", true);
     obj3.setAttribute("draggable", true);
-  
-  } 
-  else {
-    gameContainer = document.getElementById('game-container').classList.add("nodisplay");
+
+  } else {
+    let gameContainer = document.getElementById('game-container').classList.add("nodisplay");
     document.getElementById('start').classList.add("nodisplay");
     document.getElementById('game').classList.add("nodisplay");
     document.getElementById('results').classList.remove("nodisplay");
     document.getElementById('score').innerHTML = game.score;
-  };
+  }
 
 }
