@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1000">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn the Korean Alphabet">
   <meta name="keywords" content="Korean, Hangul, Learn, Alphabet">
   <meta name="author" content="Nabilah Hamidi">
@@ -30,6 +30,8 @@
   </header>
 
   <main>
+
+    <!-- Game information -->
     <section>
       <div class="container">
         <p id="game">You are on round: <span id=current-game>1</span> / 10</p>
@@ -75,28 +77,29 @@
       </div>
 
       <!-- Main game area  -->
-
-      <div id="game-container">
-        <div class="draggable-objects">
-          <div class="box-wrap">
-            <div id="obj1" class="draggable" draggable="true"></div>
+      <div class="container">
+        <div id="game-container">
+          <div class="draggable-objects">
+            <div class="box-wrap box-wrap-left">
+              <div id="obj1" class="draggable" draggable="true"></div>
+            </div>
+            <div class="box-wrap">
+              <div id="obj2" class="draggable" draggable="true"></div>
+            </div>
+            <div class="box-wrap box-wrap-right">
+              <div id="obj3" class="draggable" draggable="true"></div>
+            </div>
           </div>
-          <div class="box-wrap">
-            <div id="obj2" class="draggable" draggable="true"></div>
-          </div>
-          <div class="box-wrap">
-            <div id="obj3" class="draggable" draggable="true"></div>
-          </div>
-        </div>
-        <div class="drop-points">
-          <div class="box-wrap">
-            <div id="point1" class="droppable"></div>
-          </div>
-          <div class="box-wrap">
-            <div id="point2" class="droppable"></div>
-          </div>
-          <div class="box-wrap">
-            <div id="point3" class="droppable"></div>
+          <div class="drop-points">
+            <div class="box-wrap box-wrap-left">
+              <div id="point1" class="droppable"></div>
+            </div>
+            <div class="box-wrap">
+              <div id="point2" class="droppable"></div>
+            </div>
+            <div class="box-wrap box-wrap-right">
+              <div id="point3" class="droppable"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -138,8 +141,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
     crossorigin="anonymous"></script>
   <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"></script>
