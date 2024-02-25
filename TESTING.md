@@ -89,6 +89,8 @@ The results for javascript validation using the official [JSHint](https://jshint
 
 ![Validator results for game.js](assets/readme/validators/js-game.png)
 
+There are two unused variables listed. However they are called upon in game.html
+
 ## Lighthouse report
 
 ![Screenshot of lighthouse report: home page](assets/readme/lighthouse/lighthouse-index.png)
