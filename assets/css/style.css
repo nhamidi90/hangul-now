@@ -474,6 +474,16 @@ footer {
     .your-score {
         font-size: 30px;
     }
+
+    .house-icon {
+        font-size: 40px;
+    }
+
+    .menu-button {
+        width: 150px;
+        height: 40px;
+        margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 435px) {
