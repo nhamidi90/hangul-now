@@ -107,4 +107,5 @@ There are two unused variables listed. However they are called upon in game.html
 
 - I also had the problem of matching the korean letters to its english equivalent. To solve this I set the attribute for all draggable elements and getting the value for that. I also had to get the value of the target element and store that in a variable so that I can use the find method to compare whether thay are from the same object.
 
-- For the game page there was a problem of it zooming in while on smaller devices causing a scroll. Looking on [Stack overflow](https://stackoverflow.com/questions/14272420/webpage-starts-zoomed-in-on-mobile-devices) gave me the metadata to add to the head tag.
+- For the game page there was a problem of responsiveness while on smaller devices. Looking on [Stack overflow](https://stackoverflow.com/questions/14272420/webpage-starts-zoomed-in-on-mobile-devices) gave me the metadata to add to the head tag which I thought solved the problem but I realised I needed to create media queries and change the game play area sizes.
+
