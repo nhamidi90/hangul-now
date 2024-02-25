@@ -246,7 +246,7 @@ function next() {
   }
 
   game.questionNumber++;
-  let currentGame = document.getElementById('current-game').innerText = game.questionNumber;
+  document.getElementById('current-game').innerText = game.questionNumber;
   point1.classList.remove("dropped");
   point2.classList.remove("dropped");
   point3.classList.remove("dropped");
@@ -262,7 +262,7 @@ function next() {
     obj3.setAttribute("draggable", true);
 
   } else {
-    let gameContainer = document.getElementById('game-container').classList.add("nodisplay");
+    document.getElementById('game-container').classList.add("nodisplay");
     document.getElementById('start').classList.add("nodisplay");
     document.getElementById('game').classList.add("nodisplay");
     document.getElementById('results').classList.remove("nodisplay");
@@ -273,7 +273,7 @@ function next() {
 
 function skipQuestion() {
   game.questionNumber++;
-  let currentGame = document.getElementById('current-game').innerText = game.questionNumber;
+  document.getElementById('current-game').innerText = game.questionNumber;
   point1.classList.remove("dropped");
   point2.classList.remove("dropped");
   point3.classList.remove("dropped");
@@ -289,7 +289,7 @@ function skipQuestion() {
     obj3.setAttribute("draggable", true);
 
   } else {
-    let gameContainer = document.getElementById('game-container').classList.add("nodisplay");
+    document.getElementById('game-container').classList.add("nodisplay");
     document.getElementById('start').classList.add("nodisplay");
     document.getElementById('game').classList.add("nodisplay");
     document.getElementById('results').classList.remove("nodisplay");
