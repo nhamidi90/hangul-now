@@ -173,3 +173,8 @@ Hangul letters were referenced from [Fluent in korean](https://fluentinkorean.co
 * Code Institute - This website would not have been possible without their tutorials and walkthroughs. Tutors and slack community gave me help when I had difficulty
 * Julie Konovalova - My mentor who has given me a lot of guidance throughout this project
 * Falah Hamidi - My brother who helped me with the logic of matching correct drag and drop elements
+
+## Mistakes
+
+* Mistakes were made while commiting messages. I wrote 'Inital commit' more than once as I didn't realise I had already done that
+* While trying to solve the issues on the game page I have written that the bug was fixed thinking it was and have had to do/undo some code while testing the site on the responsive viewer to see if it worked
