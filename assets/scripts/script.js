@@ -460,4 +460,4 @@ function flip() {
 }
 
 
-module.exports = flashcard;
+module.exports = conClick;
