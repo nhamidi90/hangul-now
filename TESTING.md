@@ -5,11 +5,11 @@
 * The website was tested on three browsers to determine correct appearance, responsiveness and to ensure it works well
 * It was tested on Chrome, Firefox and Opera
 
-Firefox:
-![Screenshot of website on firefox](assets/readme/firefox-screenshot.png)
-
 Chrome:
 ![Screenshot of website on chrome](assets/readme/chrome-screenshot.png)
+
+Firefox:
+![Screenshot of website on firefox](assets/readme/firefox-screenshot.png)
 
 Opera:
 ![Screenshot of website on opera](assets/readme/opera-screenshot.png)
@@ -33,6 +33,20 @@ Opera:
     - Laptop
 
 I personally tested the website on Dell Inspiron 5000 laptop and OnePlus Nord 2T mobile
+
+Here is the website tested on different devices:
+
+* Home Page
+
+![Screenshot of home page on different devices](assets/readme/responsiveviewer-home.png)
+
+* Learn the letters Page
+
+![Screenshot of letters page on different devices](assets/readme/responsiveviewer-letters.png)
+
+* Test Yourself Page
+
+![Screenshot of game page on different devices](assets/readme/responsiveviewer-game.png)
 
 ## Manual testing
 
