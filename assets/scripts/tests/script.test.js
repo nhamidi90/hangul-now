@@ -2,8 +2,7 @@
  * @jest-environment jsdom
  */
 
-// const flashcard = require("../script");
-const  { conClick } = require("../script");
+const  { flip } = require("../script");
 
 beforeAll(() => {
     let fs = require("fs");
@@ -17,17 +16,25 @@ describe("DOM tests", () => {
     test("expect headers to exist", () => {
         expect(document.getElementsByTagName("h2").length).toBe(2);
     });
-    test("expect cards to exist", () => {
-        expect(document.getElementsByClassName("card").length).toBe(24);
+    test("expect vowels container to exist", () => {
+        expect(document.getElementById("vowels-container").length).toBe(1);
     });
+    test("expect consonants button to exist", () => {
+        expect(document.getElementById("consonants-button").length).toBe(1);
+    });
+
 })
 
 describe("button works correctly", () => {
     test("expect consonants button to hide vowels container", () => {
-        document.getElementById("consonants-button");
         let vowelsContainer = document.getElementById("vowels-container");
-        conClick();
-        expect(vowelsContainer.classList.contains("nodisplay"));
+        document.getElementById("consonants-button").click();
+        expect(vowelsContainer.classList.contains("nodisplay")).toBe(true);
+    });
+    test("expect vowels button to hide consonants container", () => {
+        let consContainer = document.getElementById("consonants-container");
+        document.getElementById("vowels-button").click();
+        expect(consContainer.classList.contains("nodisplay")).toBe(true);
     });
 })
 
@@ -35,7 +42,19 @@ describe("objects include correct values", () => {
     test('object assignment', () => {
         const vowels = {"kor": "ㅏ"};
         vowels["eng"] = "a";
-        expect(vowels).toEqual({"kor": "ㅏ", "eng": "a"});
-        
-  });
+        expect(vowels).toEqual({"kor": "ㅏ", "eng": "a"});     
+    });
+    test('object assignment', () => {
+        const consonants = {"kor": "ㄱ"};
+        consonants["eng"] = "gk";
+        expect(consonants).toEqual({"kor": "ㄱ", "eng": "gk"});     
+    });
+})
+
+describe("flip function works", () => {
+    test("expect card to flip when click", () => {
+        let card = document.getElementsByClassName('card');
+        flip();
+        expect(card.classList.toggle("flipcard")).toBe(true);
+    });
 })
