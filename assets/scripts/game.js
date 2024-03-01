@@ -1,20 +1,16 @@
 const data = [{
-    id: 1,
     eng: 'a',
     kor: 'ㅏ'
   },
   {
-    id: 2,
     eng: 'ya',
     kor: 'ㅑ'
   },
   {
-    id: 3,
     eng: 'eo',
     kor: 'ㅓ'
   },
   {
-    id: 4,
     eng: 'yeo',
     kor: 'ㅕ'
   },
@@ -24,92 +20,75 @@ const data = [{
     kor: 'ㅗ'
   },
   {
-    id: 6,
     eng: 'yo',
     kor: 'ㅛ'
   },
   {
-    id: 7,
     eng: 'u',
     kor: 'ㅜ'
   },
   {
-    id: 8,
     eng: 'yoo',
     kor: 'ㅠ'
   },
   {
-    id: 9,
     eng: 'eu',
     kor: 'ㅡ'
   },
   {
-    id: 10,
+
     eng: 'i',
     kor: 'ㅣ'
   },
   {
-    id: 11,
     eng: 'gk',
     kor: 'ㄱ'
   },
   {
-    id: 12,
     eng: 'n',
     kor: 'ㄴ'
   },
   {
-    id: 13,
     eng: 'dt',
     kor: 'ㄷ'
   },
   {
-    id: 14,
     eng: 'r/l',
     kor: 'ㄹ'
   },
   {
-    id: 15,
     eng: 'm',
     kor: 'ㅁ'
   },
   {
-    id: 16,
     eng: 'bp',
     kor: 'ㅂ'
   },
   {
-    id: 17,
     eng: 's',
     kor: 'ㅅ'
   },
   {
-    id: 18,
     eng: '-/ng',
     kor: 'ㅇ'
   },
   {
-    id: 19,
     eng: 'j',
     kor: 'ㅈ'
   },
   {
-    id: 20,
     eng: 'ch',
     kor: 'ㅊ'
   },
   {
-    id: 21,
     eng: 'k',
     kor: 'ㅋ'
   },
   {
-    id: 22,
     eng: 't',
     kor: 'ㅌ'
   },
   {
-    id: 23,
     eng: 'p',
     kor: 'ㅍ'
   },
@@ -117,6 +96,70 @@ const data = [{
     id: 24,
     eng: 'h',
     kor: 'ㅎ'
+  },
+  {
+    eng: 'kk',
+    kor: 'ㄲ',
+  },
+  {
+    eng: 'tt',
+    kor: 'ㄸ',
+  },
+  {
+    eng: 'pp',
+    kor: 'ㅃ',
+  },
+  {
+    eng: 'ss',
+    kor: 'ㅆ',
+  },
+  {
+    eng: 'jj',
+    kor: 'ㅉ',
+  },
+  {
+    eng: 'ae',
+    kor: 'ㅐ',
+  },
+  {
+    eng: 'yae',
+    kor: 'ㅒ',
+  },
+  {
+    eng: 'e',
+    kor: 'ㅔ',
+  },
+  {
+    eng: 'ye',
+    kor: 'ㅖ',
+  },
+  {
+    eng: 'wa',
+    kor: 'ㅘ',
+  },
+  {
+    eng: 'oe',
+    kor: 'ㅚ',
+  },
+  {
+    eng: 'wae',
+    kor: 'ㅙ',
+  },
+  {
+    eng: 'wo',
+    kor: 'ㅝ',
+  },
+  {
+    eng: 'we',
+    kor: 'ㅞ',
+  },
+  {
+    eng: 'wi',
+    kor: 'ㅟ',
+  },
+  {
+    eng: 'ui',
+    kor: 'ㅢ',
   },
 ];
 
