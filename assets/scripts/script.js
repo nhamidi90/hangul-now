@@ -206,6 +206,8 @@ let doubleConsonants = [{
     },
 ];
 
+document.addEventListener('DOMContentLoaded', function()
+{
 //Add consonants to page
 
 
@@ -459,5 +461,5 @@ function flip() {
     this.classList.toggle("flipcard");
 }
 
+})
 
-module.exports = conClick;
