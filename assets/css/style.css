@@ -410,6 +410,10 @@ a {
         height: 130px;
         font-size: 40px;
     }
+
+    #point1.dropped, #point2.dropped, #point3.dropped {
+        font-size: 50px;
+    }
 }
 
 @media only screen and (max-width: 630px) {
@@ -486,6 +490,11 @@ a {
         margin-right: 15px;
     }
 
+    #point1.dropped, #point2.dropped, #point3.dropped {
+        font-size: 40px;
+        border: 3px solid;
+    }
+
     footer {
         font-size: 15px;
     }
@@ -520,10 +529,24 @@ a {
 
 @media only screen and (max-width: 435px) {
 
-    #vowels-container, #cv-container, #consonants-container, #dc-container {
-        padding: 0;
-        justify-content: center;
+    #game-container {
+        width: 300px;
+        height: 260px;
     }
 
+    .box-wrap {
+        width: 80px;
+        height: 80px;
+    }
+
+    #obj1, #obj2, #obj3 {
+        width: 80px;
+        height: 80px;
+    }
+
+    #point1, #point2, #point3 {
+        width: 80px;
+        height: 80px;
+    }
 }
 
