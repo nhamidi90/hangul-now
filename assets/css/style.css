@@ -122,6 +122,7 @@ main {
 
 .index-container {
     margin: auto;
+    margin-top: 0;
     max-width: 80rem;
 }
 
