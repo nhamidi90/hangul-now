@@ -177,6 +177,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .footer-row {
@@ -197,6 +198,9 @@ footer {
     color: cadetblue;
 }
 
+a {
+    text-decoration: none;
+}
 
 /* ---------------- Letters */
 
@@ -475,6 +479,7 @@ footer {
     #obj3, #point3, .box-wrap-right {
         margin-right: 15px;
     }
+
     footer {
         font-size: 15px;
     }
