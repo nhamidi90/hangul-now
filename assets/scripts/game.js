@@ -176,13 +176,18 @@ let randomIndex1;
 let randomIndex2;
 let randomIndex3;
 
-let obj1 = document.getElementById('obj1');
-let obj2 = document.getElementById('obj2');
-let obj3 = document.getElementById('obj3');
+const obj1 = document.getElementById('obj1');
+const obj2 = document.getElementById('obj2');
+const obj3 = document.getElementById('obj3');
 
-let point1 = document.getElementById('point1');
-let point2 = document.getElementById('point2');
-let point3 = document.getElementById('point3');
+const point1 = document.getElementById('point1');
+const point2 = document.getElementById('point2');
+const point3 = document.getElementById('point3');
+
+/**
+ * This will generate three random objects from the data, find the korean letters and append them to the draggable elements. 
+ * The english equivelants are shuffled and appended to the drop elements.
+ */
 
 const randomValueGenerator = () => {
   randomIndex1 = Math.floor(Math.random() * data.length);
@@ -257,6 +262,13 @@ function dragOver(event) {
   event.preventDefault();
 }
 
+/** 
+ * If the correct letters are matched, the drag element data will be appended to the drop element. 
+ * Otherwise it will return to its original place.
+ * Styling is changed depending on the action
+ * For each correct answer, score will be increased by 1
+ */
+
 function drop(event) {
   event.preventDefault();
   event.target.classList.remove("drop-hover");
@@ -280,6 +292,15 @@ function drop(event) {
 }
 
 // Next button
+
+/**
+ * This will go to the next round of questions
+ * If there are unsanswered questions, a modal will pop up
+ * This will confirm whether the user wants to skip or not
+ * The round number will increase by 1
+ * styling is reset
+ * If the user has reached the end of all questions, they will be directed to the results page
+ */
 
 function next() {
 
@@ -313,6 +334,13 @@ function next() {
   }
 
 }
+
+/**
+ * If user skips question they will go to the next round of questions
+ * The round number will increase by 1
+ * Styling is reset
+ * If the user has reached the end of all questions, they will be directed to the results page
+ */
 
 function skipQuestion() {
   game.questionNumber++;
