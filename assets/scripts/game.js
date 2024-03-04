@@ -163,6 +163,9 @@ const data = [{
   },
 ];
 
+document.getElementById("skip-question").addEventListener("click", skipQuestion);
+document.getElementById("start").addEventListener("click", next);
+
 // Game
 let game = {
   questionNumber: 1,
