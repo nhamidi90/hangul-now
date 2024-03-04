@@ -135,6 +135,10 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
 - Alternatively, to open the workspace in Gitpod, you can [click here](https://gitpod.io/#https://github.com/nhamidi90/hangul-now)
 
+## Known issues
+
+- Some characters are not correctly expressed through the audio and do sound similar to other letters. This is due to using text to speech
+
 ## Future improvements
 
 * I would like to add a section for users to learn about how to form syllabic blocks used in korean writing so they can learn how to read words
