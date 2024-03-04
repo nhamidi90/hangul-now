@@ -6,17 +6,17 @@ I was unable to get Jest to work properly in order to test my code. I tried many
 
 * When I run the test: TypeError: Cannot read properties of null (reading 'appendChild')
 
-![The error which appears when running jest](assets/readme/jest-errors/script-error.png)\
+![The error which appears when running jest](documentation/jest-errors/script-error.png)\
 *Error 1*
 
 * I tried to add a DOM content loaded event listener but got this error instead:
 
-![The error which appears when adding DOM event listener](assets/readme/jest-errors/script-eventlistener-added.png)\
+![The error which appears when adding DOM event listener](documentation/jest-errors/script-eventlistener-added.png)\
 *Error 2*
 
 * However, if I kept the event listener but commented out module.exports, I managed to get some passing tests. The failed tests were because something was undefined or it could not find the function
 
-![The error which appears when removing module.exports](assets/readme/jest-errors/script-undefined.png)
+![The error which appears when removing module.exports](documentation/jest-errors/script-undefined.png)
 
 * I tried to edit my code:
 
@@ -43,16 +43,16 @@ for (let i = 0; i < allCons; i++) {
   
 * Testing the new code with event listener and removing module.exports produces many errors:
 
-![The error which appears when testing the new code, adding event lister and removing module.exports](assets/readme/jest-errors/script-newcode.png)
+![The error which appears when testing the new code, adding event lister and removing module.exports](documentation/jest-errors/script-newcode.png)
 
 ## game.js
 
 * Similarly testing game.js was also difficult as it came up with this error:
 
-![The error which appears when exporting functions](assets/readme/jest-errors/game-error.png)
+![The error which appears when exporting functions](documentation/jest-errors/game-error.png)
 
 * If it tried to add a DOM loaded event listener like in the other file, a different error appears:
 
-![The error which appears when exporting functions](assets/readme/jest-errors/game-domloader-added.png)
+![The error which appears when exporting functions](documentation/jest-errors/game-domloader-added.png)
 
 * However, despite all of these errors, the website still functions correctly
