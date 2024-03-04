@@ -184,14 +184,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-.footer-row {
-    width:100%;
-}
-
-.footer-col {
-    padding-top: 10px;
+    flex-wrap: wrap;
 }
 
 .footer-icons {
