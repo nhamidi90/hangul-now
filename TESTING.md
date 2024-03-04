@@ -6,13 +6,13 @@
 * It was tested on Chrome, Firefox and Opera
 
 Chrome:
-![Screenshot of website on chrome](assets/readme/chrome-screenshot.png)
+![Screenshot of website on chrome](documentation/chrome-screenshot.png)
 
 Firefox:
-![Screenshot of website on firefox](assets/readme/firefox-screenshot.png)
+![Screenshot of website on firefox](documentation/firefox-screenshot.png)
 
 Opera:
-![Screenshot of website on opera](assets/readme/opera-screenshot.png)
+![Screenshot of website on opera](documentation/opera-screenshot.png)
 
 * The responsiveness of the site was also tested using chrome devtools. Devices tested include:
 
@@ -38,15 +38,15 @@ Here is the website tested on different devices:
 
 * Home Page
 
-![Screenshot of home page on different devices](assets/readme/responsiveviewer-home.png)
+![Screenshot of home page on different devices](documentation/responsiveviewer-home.png)
 
 * Learn the letters Page
 
-![Screenshot of letters page on different devices](assets/readme/responsiveviewer-letters.png)
+![Screenshot of letters page on different devices](documentation/responsiveviewer-letters.png)
 
 * Test Yourself Page
 
-![Screenshot of game page on different devices](assets/readme/responsiveviewer-game.png)
+![Screenshot of game page on different devices](documentation/responsiveviewer-game.png)
 
 ## Manual testing
 
@@ -83,35 +83,35 @@ Here is the website tested on different devices:
 
 The website passed all tests using the [W3C HTML Validator](https://validator.w3.org/nu/) tool
 
-![Validator results for index page](assets/readme/validators/htmlvalidator-index.png)
+![Validator results for index page](documentation/validators/htmlvalidator-index.png)
 
-![Validator results for letters page](assets/readme/validators/htmlvalidator-letters.png)
+![Validator results for letters page](documentation/validators/htmlvalidator-letters.png)
 
-![Validator results for game page](assets/readme/validators/htmlvalidator-game.png)
+![Validator results for game page](documentation/validators/htmlvalidator-game.png)
 
 ### CSS
 
 The website passed all tests using the [W3C CSS validator](https://jigsaw.w3.org/css-validator/) tool
 
-![Validator results for CSS](assets/readme/validators/css-validator.png)
+![Validator results for CSS](documentation/validators/css-validator.png)
 
 ### Javascript
 
 The results for javascript validation using the official [JSHint](https://jshint.com/) validator is as follows:
 
-![Validator results for script.js](assets/readme/validators/js-script.png)
+![Validator results for script.js](documentation/validators/js-script.png)
 
-![Validator results for game.js](assets/readme/validators/js-game.png)
+![Validator results for game.js](documentation/validators/js-game.png)
 
 There are two unused variables listed. However they are called upon in game.html
 
 ## Lighthouse report
 
-![Screenshot of lighthouse report: home page](assets/readme/lighthouse/lighthouse-index.png)
+![Screenshot of lighthouse report: home page](documentation/lighthouse/lighthouse-index.png)
 
-![Screenshot of lighthouse report: letters page](assets/readme/lighthouse/lighthouse-letters.png)
+![Screenshot of lighthouse report: letters page](documentation/lighthouse/lighthouse-letters.png)
 
-![Screenshot of lighthouse report: game page](assets/readme/lighthouse/lighthouse-game.png)
+![Screenshot of lighthouse report: game page](documentation/lighthouse/lighthouse-game.png)
 
 ## Bugs
 

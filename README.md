@@ -2,7 +2,7 @@
 
 Hangul now is an interactive website for visitors to learn the Korean alphabet and how to form letters into syllabic blocks. Visitors can toggle between the Korean and Romanisation of each letter via the flashcards and listen to how it sounds. They can also have a go at playing the drag and drop game where they have to match the correct Korean letter to its sound.
 
-![Screenshot of the website on different devices](assets/readme/mockup.png)
+![Screenshot of the website on different devices](documentation/mockup.png)
 
 The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
@@ -32,7 +32,7 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 * All pages will include the footer
 * The footer includes links to Facebook, Tiktok and Instagram which open in a new page
 
-![Screenshot of Vowels - Korean side of flashcards](assets/readme/footer.png)
+![Screenshot of Vowels - Korean side of flashcards](documentation/footer.png)
 
 
 ### Home page
@@ -40,7 +40,7 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 * The 'Learn the letters' button links to the page where users can learn the korean alphabet
 * The 'Test yourself' button leads users to the game page where they can test what they have learnt
 
-![Screenshot of index page](assets/readme/index-page.png)
+![Screenshot of index page](documentation/index-page.png)
 
 ### Learn the Letters
 
@@ -50,10 +50,10 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 * After flipping, the english transliteration is displayed
 * The top displays the logo and a home button. Both lead to the index page
 
-![Screenshot of Vowels - Korean side of flashcards](assets/readme/vowels-kor.png)
-![Screenshot of Vowels- English side of flashcards](assets/readme/vowels-eng.png)
-![Screenshot of Consonants - Korean side of flashcards](assets/readme/consonants-kor.png)
-![Screenshot of Consonants- English side of flashcards](assets/readme/consonants-eng.png)
+![Screenshot of Vowels - Korean side of flashcards](documentation/vowels-kor.png)
+![Screenshot of Vowels- English side of flashcards](documentation/vowels-eng.png)
+![Screenshot of Consonants - Korean side of flashcards](documentation/consonants-kor.png)
+![Screenshot of Consonants- English side of flashcards](documentation/consonants-eng.png)
 
 ### Test Yourself
 
@@ -66,16 +66,16 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 * Once the user has finished 10 rounds, they will be taken to the results page
 * A plugin is used to enable drag and drop for touchscreen
 
-![Screenshot of game page](assets/readme/game-page.png)
-![Screenshot of rules modal](assets/readme/rules-modal.png)
-![Screenshot of skip question modal](assets/readme/skip-modal.png)
+![Screenshot of game page](documentation/game-page.png)
+![Screenshot of rules modal](documentation/rules-modal.png)
+![Screenshot of skip question modal](documentation/skip-modal.png)
 
 ### Results page
 
 * Once users have finished the game they will be directed to the results page with their score
 * They have the option to return home or play again
 
-![Screenshot of results page](assets/readme/results-page.png)
+![Screenshot of results page](documentation/results-page.png)
 
 ## Technologies Used
 
@@ -96,19 +96,19 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 ## Wireframes
 
 ### Desktop screen
-* [Home](assets/readme/wireframes/desktop-index.png)
-* [Learn the Alphabet](assets/readme/wireframes/desktop-letters.png)
-* [Test Yourself](assets/readme/wireframes/desktop-game.png)
+* [Home](documentation/wireframes/desktop-index.png)
+* [Learn the Alphabet](documentation/wireframes/desktop-letters.png)
+* [Test Yourself](documentation/wireframes/desktop-game.png)
 
 ### Tablet screen (small and large)
-* [Home](assets/readme/wireframes/tablet-index.png)
-* [Learn the Alphabet](assets/readme/wireframes/tablet-letters.png)
-* [Test Yourself](assets/readme/wireframes/tablet-game.png)
+* [Home](documentation/wireframes/tablet-index.png)
+* [Learn the Alphabet](documentation/wireframes/tablet-letters.png)
+* [Test Yourself](documentation/wireframes/tablet-game.png)
 
 ### Mobile screen
-* [Home](assets/readme/wireframes/mobile-index.png)
-* [Learn the Alphabet](assets/readme/wireframes/mobile-letters.png)
-* [Test Yourself](assets/readme/wireframes/mobile-game.png)
+* [Home](documentation/wireframes/mobile-index.png)
+* [Learn the Alphabet](documentation/wireframes/mobile-letters.png)
+* [Test Yourself](documentation/wireframes/mobile-game.png)
 
 ## Testing
 
