@@ -26,13 +26,18 @@ body {
     flex-direction: column;
 }
 
-h1 {
+.headings, .rules-heading {
     color: #2a4a85;
     font-family: "single day", sans-serif;
     font-size: 60px;
     text-align: center;
     margin: 50px;
     margin-top: auto;
+}
+
+.rules-heading {
+    margin: 0;
+    font-size: 30px;
 }
 
 h2 {
