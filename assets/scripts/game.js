@@ -1,167 +1,186 @@
-const data = [{
-    eng: 'a',
-    kor: 'ㅏ'
-  },
-  {
-    eng: 'ya',
-    kor: 'ㅑ'
-  },
-  {
-    eng: 'eo',
-    kor: 'ㅓ'
-  },
-  {
-    eng: 'yeo',
-    kor: 'ㅕ'
-  },
-  {
-    id: 5,
-    eng: 'o',
-    kor: 'ㅗ'
-  },
-  {
-    eng: 'yo',
-    kor: 'ㅛ'
-  },
-  {
-    eng: 'u',
-    kor: 'ㅜ'
-  },
-  {
-    eng: 'yoo',
-    kor: 'ㅠ'
-  },
-  {
-    eng: 'eu',
-    kor: 'ㅡ'
-  },
-  {
+// const data = [{
+//     eng: 'a',
+//     kor: 'ㅏ'
+//   },
+//   {
+//     eng: 'ya',
+//     kor: 'ㅑ'
+//   },
+//   {
+//     eng: 'eo',
+//     kor: 'ㅓ'
+//   },
+//   {
+//     eng: 'yeo',
+//     kor: 'ㅕ'
+//   },
+//   {
+//     eng: 'o',
+//     kor: 'ㅗ'
+//   },
+//   {
+//     eng: 'yo',
+//     kor: 'ㅛ'
+//   },
+//   {
+//     eng: 'u',
+//     kor: 'ㅜ'
+//   },
+//   {
+//     eng: 'yoo',
+//     kor: 'ㅠ'
+//   },
+//   {
+//     eng: 'eu',
+//     kor: 'ㅡ'
+//   },
+//   {
 
-    eng: 'i',
-    kor: 'ㅣ'
-  },
-  {
-    eng: 'gk',
-    kor: 'ㄱ'
-  },
-  {
-    eng: 'n',
-    kor: 'ㄴ'
-  },
-  {
-    eng: 'dt',
-    kor: 'ㄷ'
-  },
-  {
-    eng: 'r/l',
-    kor: 'ㄹ'
-  },
-  {
-    eng: 'm',
-    kor: 'ㅁ'
-  },
-  {
-    eng: 'bp',
-    kor: 'ㅂ'
-  },
-  {
-    eng: 's',
-    kor: 'ㅅ'
-  },
-  {
-    eng: '-/ng',
-    kor: 'ㅇ'
-  },
-  {
-    eng: 'j',
-    kor: 'ㅈ'
-  },
-  {
-    eng: 'ch',
-    kor: 'ㅊ'
-  },
-  {
-    eng: 'k',
-    kor: 'ㅋ'
-  },
-  {
-    eng: 't',
-    kor: 'ㅌ'
-  },
-  {
-    eng: 'p',
-    kor: 'ㅍ'
-  },
-  {
-    id: 24,
-    eng: 'h',
-    kor: 'ㅎ'
-  },
-  {
-    eng: 'kk',
-    kor: 'ㄲ',
-  },
-  {
-    eng: 'tt',
-    kor: 'ㄸ',
-  },
-  {
-    eng: 'pp',
-    kor: 'ㅃ',
-  },
-  {
-    eng: 'ss',
-    kor: 'ㅆ',
-  },
-  {
-    eng: 'jj',
-    kor: 'ㅉ',
-  },
-  {
-    eng: 'ae',
-    kor: 'ㅐ',
-  },
-  {
-    eng: 'yae',
-    kor: 'ㅒ',
-  },
-  {
-    eng: 'e',
-    kor: 'ㅔ',
-  },
-  {
-    eng: 'ye',
-    kor: 'ㅖ',
-  },
-  {
-    eng: 'wa',
-    kor: 'ㅘ',
-  },
-  {
-    eng: 'oe',
-    kor: 'ㅚ',
-  },
-  {
-    eng: 'wae',
-    kor: 'ㅙ',
-  },
-  {
-    eng: 'wo',
-    kor: 'ㅝ',
-  },
-  {
-    eng: 'we',
-    kor: 'ㅞ',
-  },
-  {
-    eng: 'wi',
-    kor: 'ㅟ',
-  },
-  {
-    eng: 'ui',
-    kor: 'ㅢ',
-  },
-];
+//     eng: 'i',
+//     kor: 'ㅣ'
+//   },
+//   {
+//     eng: 'gk',
+//     kor: 'ㄱ'
+//   },
+//   {
+//     eng: 'n',
+//     kor: 'ㄴ'
+//   },
+//   {
+//     eng: 'dt',
+//     kor: 'ㄷ'
+//   },
+//   {
+//     eng: 'r/l',
+//     kor: 'ㄹ'
+//   },
+//   {
+//     eng: 'm',
+//     kor: 'ㅁ'
+//   },
+//   {
+//     eng: 'bp',
+//     kor: 'ㅂ'
+//   },
+//   {
+//     eng: 's',
+//     kor: 'ㅅ'
+//   },
+//   {
+//     eng: '-/ng',
+//     kor: 'ㅇ'
+//   },
+//   {
+//     eng: 'j',
+//     kor: 'ㅈ'
+//   },
+//   {
+//     eng: 'ch',
+//     kor: 'ㅊ'
+//   },
+//   {
+//     eng: 'k',
+//     kor: 'ㅋ'
+//   },
+//   {
+//     eng: 't',
+//     kor: 'ㅌ'
+//   },
+//   {
+//     eng: 'p',
+//     kor: 'ㅍ'
+//   },
+//   {
+//     eng: 'h',
+//     kor: 'ㅎ'
+//   },
+//   {
+//     eng: 'kk',
+//     kor: 'ㄲ',
+//   },
+//   {
+//     eng: 'tt',
+//     kor: 'ㄸ',
+//   },
+//   {
+//     eng: 'pp',
+//     kor: 'ㅃ',
+//   },
+//   {
+//     eng: 'ss',
+//     kor: 'ㅆ',
+//   },
+//   {
+//     eng: 'jj',
+//     kor: 'ㅉ',
+//   },
+//   {
+//     eng: 'ae',
+//     kor: 'ㅐ',
+//   },
+//   {
+//     eng: 'yae',
+//     kor: 'ㅒ',
+//   },
+//   {
+//     eng: 'e',
+//     kor: 'ㅔ',
+//   },
+//   {
+//     eng: 'ye',
+//     kor: 'ㅖ',
+//   },
+//   {
+//     eng: 'wa',
+//     kor: 'ㅘ',
+//   },
+//   {
+//     eng: 'oe',
+//     kor: 'ㅚ',
+//   },
+//   {
+//     eng: 'wae',
+//     kor: 'ㅙ',
+//   },
+//   {
+//     eng: 'wo',
+//     kor: 'ㅝ',
+//   },
+//   {
+//     eng: 'we',
+//     kor: 'ㅞ',
+//   },
+//   {
+//     eng: 'wi',
+//     kor: 'ㅟ',
+//   },
+//   {
+//     eng: 'ui',
+//     kor: 'ㅢ',
+//   },
+// ];
+
+async function fetchData() {
+  try {
+    const response = await fetch('assets/scripts/json/game-data.json');
+    if (!response.ok) {
+      throw new Error('HTTP error! status: ${response.status}');
+    }
+    const data = await response.json();
+    if (Array.isArray(data.data)) {
+      data = data.data;
+    } else {
+      throw new Error('Invalid data format');
+    }
+
+  } catch (error) {
+    console.log(error);
+    return []
+  }
+}
+
+fetchData();
 
 document.getElementById("skip-question").addEventListener("click", skipQuestion);
 document.getElementById("start").addEventListener("click", next);
