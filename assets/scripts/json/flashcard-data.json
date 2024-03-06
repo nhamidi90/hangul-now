@@ -1,0 +1,242 @@
+{
+    "letters": [{
+    "eng": "a",
+    "kor": "ㅏ",
+    "audio": "assets/audio/a.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "ya",
+    "kor": "ㅑ",
+    "audio": "assets/audio/ya.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "eo",
+    "kor": "ㅓ",
+    "audio": "assets/audio/eo.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "yeo",
+    "kor": "ㅕ",
+    "audio": "assets/audio/yeo.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "o",
+    "kor": "ㅗ",
+    "audio": "assets/audio/o.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "yo",
+    "kor": "ㅛ",
+    "audio": "assets/audio/yo.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "u",
+    "kor": "ㅜ",
+    "audio": "assets/audio/u.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "yoo",
+    "kor": "ㅠ",
+    "audio": "assets/audio/yu.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "eu",
+    "kor": "ㅡ",
+    "audio": "assets/audio/eu.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "i",
+    "kor": "ㅣ",
+    "audio": "assets/audio/i.mp3",
+    "type": "vowels"
+},
+{
+    "eng": "ae",
+    "kor": "ㅐ",
+    "audio": "assets/audio/ae.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "yae",
+    "kor": "ㅒ",
+    "audio": "assets/audio/yae.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "e",
+    "kor": "ㅔ",
+    "audio": "assets/audio/e.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "ye",
+    "kor": "ㅖ",
+    "audio": "assets/audio/ye.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "wa",
+    "kor": "ㅘ",
+    "audio": "assets/audio/wa.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "oe",
+    "kor": "ㅚ",
+    "audio": "assets/audio/oe.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "wae",
+    "kor": "ㅙ",
+    "audio": "assets/audio/wae.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "wo",
+    "kor": "ㅝ",
+    "audio": "assets/audio/wo.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "we",
+    "kor": "ㅞ",
+    "audio": "assets/audio/we.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "wi",
+    "kor": "ㅟ",
+    "audio": "assets/audio/wi.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "ui",
+    "kor": "ㅢ",
+    "audio": "assets/audio/ui.mp3",
+    "type": "compoundVowels"
+},
+{
+    "eng": "gk",
+    "kor": "ㄱ",
+    "audio": "assets/audio/gk.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "n",
+    "kor": "ㄴ",
+    "audio": "assets/audio/n.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "dt",
+    "kor": "ㄷ",
+    "audio": "assets/audio/dt.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "r/l",
+    "kor": "ㄹ",
+    "audio": "assets/audio/r.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "m",
+    "kor": "ㅁ",
+    "audio": "assets/audio/m.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "bp",
+    "kor": "ㅂ",
+    "audio": "assets/audio/b.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "s",
+    "kor": "ㅅ",
+    "audio": "assets/audio/s.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "-/ng",
+    "kor": "ㅇ",
+    "audio": "assets/audio/ng.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "j",
+    "kor": "ㅈ",
+    "audio": "assets/audio/j.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "ch",
+    "kor": "ㅊ",
+    "audio": "assets/audio/ch.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "k",
+    "kor": "ㅋ",
+    "audio": "assets/audio/k.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "t",
+    "kor": "ㅌ",
+    "audio": "assets/audio/t.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "p",
+    "kor": "ㅍ",
+    "audio": "assets/audio/p.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "h",
+    "kor": "ㅎ",
+    "audio": "assets/audio/h.mp3",
+    "type": "consonants"
+},
+{
+    "eng": "kk",
+    "kor": "ㄲ",
+    "audio": "assets/audio/kk.mp3",
+    "type": "doubleConsonants"
+},
+{
+    "eng": "tt",
+    "kor": "ㄸ",
+    "audio": "assets/audio/tt.mp3",
+    "type": "doubleConsonants"
+},
+{
+    "eng": "pp",
+    "kor": "ㅃ",
+    "audio": "assets/audio/pp.mp3",
+    "type": "doubleConsonants"
+},
+{
+    "eng": "ss",
+    "kor": "ㅆ",
+    "audio": "assets/audio/ss.mp3",
+    "type": "doubleConsonants"
+},
+{
+    "eng": "jj",
+    "kor": "ㅉ",
+    "audio": "assets/audio/jj.mp3",
+    "type": "doubleConsonants"
+}]
+}
