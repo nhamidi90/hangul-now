@@ -149,7 +149,7 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
 ### Content
 
-Hangul letters were referenced from [Fluent in korean](https://fluentinkorean.com/korean-alphabet-2/)
+* Hangul letters were referenced from [Fluent in korean](https://fluentinkorean.com/korean-alphabet-2/)
 
 ### Media
 
@@ -161,6 +161,8 @@ Hangul letters were referenced from [Fluent in korean](https://fluentinkorean.co
 
 * [Speakatoo](https://www.speakatoo.com/) text to speech was used create the audio for the flashcards
 * [Bernardo Castilho's](https://github.com/Bernardo-Castilho/dragdroptouch) plugin was used to allow drag and drop to work on touchscreens
+* [Amiresponsive](https://ui.dev/amiresponsive) was used to create a mockup of the website for the README
+* [Responsive viewer](https://responsiveviewer.org/) was used to check how the website looks on different devices
 
 ### Code
 
