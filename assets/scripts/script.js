@@ -1,216 +1,243 @@
-let vowels = [{
-        eng: 'a',
-        kor: 'ㅏ',
-        audio: 'assets/audio/a.mp3'
-    },
-    {
-        eng: 'ya',
-        kor: 'ㅑ',
-        audio: 'assets/audio/ya.mp3'
-    },
-    {
-        eng: 'eo',
-        kor: 'ㅓ',
-        audio: 'assets/audio/eo.mp3'
-    },
-    {
-        eng: 'yeo',
-        kor: 'ㅕ',
-        audio: 'assets/audio/yeo.mp3'
-    },
-    {
-        eng: 'o',
-        kor: 'ㅗ',
-        audio: 'assets/audio/o.mp3'
-    },
-    {
-        eng: 'yo',
-        kor: 'ㅛ',
-        audio: 'assets/audio/yo.mp3'
-    },
-    {
-        eng: 'u',
-        kor: 'ㅜ',
-        audio: 'assets/audio/u.mp3'
-    },
-    {
-        eng: 'yoo',
-        kor: 'ㅠ',
-        audio: 'assets/audio/yu.mp3'
-    },
-    {
-        eng: 'eu',
-        kor: 'ㅡ',
-        audio: 'assets/audio/eu.mp3'
-    },
-    {
-        eng: 'i',
-        kor: 'ㅣ',
-        audio: 'assets/audio/i.mp3'
-    },
-];
+// let vowels = [{
+//         eng: 'a',
+//         kor: 'ㅏ',
+//         audio: 'assets/audio/a.mp3'
+//     },
+//     {
+//         eng: 'ya',
+//         kor: 'ㅑ',
+//         audio: 'assets/audio/ya.mp3'
+//     },
+//     {
+//         eng: 'eo',
+//         kor: 'ㅓ',
+//         audio: 'assets/audio/eo.mp3'
+//     },
+//     {
+//         eng: 'yeo',
+//         kor: 'ㅕ',
+//         audio: 'assets/audio/yeo.mp3'
+//     },
+//     {
+//         eng: 'o',
+//         kor: 'ㅗ',
+//         audio: 'assets/audio/o.mp3'
+//     },
+//     {
+//         eng: 'yo',
+//         kor: 'ㅛ',
+//         audio: 'assets/audio/yo.mp3'
+//     },
+//     {
+//         eng: 'u',
+//         kor: 'ㅜ',
+//         audio: 'assets/audio/u.mp3'
+//     },
+//     {
+//         eng: 'yoo',
+//         kor: 'ㅠ',
+//         audio: 'assets/audio/yu.mp3'
+//     },
+//     {
+//         eng: 'eu',
+//         kor: 'ㅡ',
+//         audio: 'assets/audio/eu.mp3'
+//     },
+//     {
+//         eng: 'i',
+//         kor: 'ㅣ',
+//         audio: 'assets/audio/i.mp3'
+//     },
+// ];
 
-let compoundVowels = [{
-        eng: 'ae',
-        kor: 'ㅐ',
-        audio: 'assets/audio/ae.mp3'
-    },
-    {
-        eng: 'yae',
-        kor: 'ㅒ',
-        audio: 'assets/audio/yae.mp3'
-    },
-    {
-        eng: 'e',
-        kor: 'ㅔ',
-        audio: 'assets/audio/e.mp3'
-    },
-    {
-        eng: 'ye',
-        kor: 'ㅖ',
-        audio: 'assets/audio/ye.mp3'
-    },
-    {
-        eng: 'wa',
-        kor: 'ㅘ',
-        audio: 'assets/audio/wa.mp3'
-    },
-    {
-        eng: 'oe',
-        kor: 'ㅚ',
-        audio: 'assets/audio/oe.mp3'
-    },
-    {
-        eng: 'wae',
-        kor: 'ㅙ',
-        audio: 'assets/audio/wae.mp3'
-    },
-    {
-        eng: 'wo',
-        kor: 'ㅝ',
-        audio: 'assets/audio/wo.mp3'
-    },
-    {
-        eng: 'we',
-        kor: 'ㅞ',
-        audio: 'assets/audio/we.mp3'
-    },
-    {
-        eng: 'wi',
-        kor: 'ㅟ',
-        audio: 'assets/audio/wi.mp3'
-    },
-    {
-        eng: 'ui',
-        kor: 'ㅢ',
-        audio: 'assets/audio/ui.mp3'
-    },
-];
+// let compoundVowels = [{
+//         eng: 'ae',
+//         kor: 'ㅐ',
+//         audio: 'assets/audio/ae.mp3'
+//     },
+//     {
+//         eng: 'yae',
+//         kor: 'ㅒ',
+//         audio: 'assets/audio/yae.mp3'
+//     },
+//     {
+//         eng: 'e',
+//         kor: 'ㅔ',
+//         audio: 'assets/audio/e.mp3'
+//     },
+//     {
+//         eng: 'ye',
+//         kor: 'ㅖ',
+//         audio: 'assets/audio/ye.mp3'
+//     },
+//     {
+//         eng: 'wa',
+//         kor: 'ㅘ',
+//         audio: 'assets/audio/wa.mp3'
+//     },
+//     {
+//         eng: 'oe',
+//         kor: 'ㅚ',
+//         audio: 'assets/audio/oe.mp3'
+//     },
+//     {
+//         eng: 'wae',
+//         kor: 'ㅙ',
+//         audio: 'assets/audio/wae.mp3'
+//     },
+//     {
+//         eng: 'wo',
+//         kor: 'ㅝ',
+//         audio: 'assets/audio/wo.mp3'
+//     },
+//     {
+//         eng: 'we',
+//         kor: 'ㅞ',
+//         audio: 'assets/audio/we.mp3'
+//     },
+//     {
+//         eng: 'wi',
+//         kor: 'ㅟ',
+//         audio: 'assets/audio/wi.mp3'
+//     },
+//     {
+//         eng: 'ui',
+//         kor: 'ㅢ',
+//         audio: 'assets/audio/ui.mp3'
+//     },
+// ];
 
-let consonants = [{
-        eng: 'gk',
-        kor: 'ㄱ',
-        audio: 'assets/audio/gk.mp3'
-    },
-    {
-        eng: 'n',
-        kor: 'ㄴ',
-        audio: 'assets/audio/n.mp3'
-    },
-    {
-        eng: 'dt',
-        kor: 'ㄷ',
-        audio: 'assets/audio/dt.mp3'
-    },
-    {
-        eng: 'r/l',
-        kor: 'ㄹ',
-        audio: 'assets/audio/r.mp3'
-    },
-    {
-        eng: 'm',
-        kor: 'ㅁ',
-        audio: 'assets/audio/m.mp3'
-    },
-    {
-        eng: 'bp',
-        kor: 'ㅂ',
-        audio: 'assets/audio/b.mp3'
-    },
-    {
-        eng: 's',
-        kor: 'ㅅ',
-        audio: 'assets/audio/s.mp3'
-    },
-    {
-        eng: '-/ng',
-        kor: 'ㅇ',
-        audio: 'assets/audio/ng.mp3'
-    },
-    {
-        eng: 'j',
-        kor: 'ㅈ',
-        audio: 'assets/audio/j.mp3'
-    },
-    {
-        eng: 'ch',
-        kor: 'ㅊ',
-        audio: 'assets/audio/ch.mp3'
-    },
-    {
-        eng: 'k',
-        kor: 'ㅋ',
-        audio: 'assets/audio/k.mp3'
-    },
-    {
-        eng: 't',
-        kor: 'ㅌ',
-        audio: 'assets/audio/t.mp3'
-    },
-    {
-        eng: 'p',
-        kor: 'ㅍ',
-        audio: 'assets/audio/p.mp3'
-    },
-    {
-        eng: 'h',
-        kor: 'ㅎ',
-        audio: 'assets/audio/h.mp3'
-    },
-];
+// let consonants = [{
+//         eng: 'gk',
+//         kor: 'ㄱ',
+//         audio: 'assets/audio/gk.mp3'
+//     },
+//     {
+//         eng: 'n',
+//         kor: 'ㄴ',
+//         audio: 'assets/audio/n.mp3'
+//     },
+//     {
+//         eng: 'dt',
+//         kor: 'ㄷ',
+//         audio: 'assets/audio/dt.mp3'
+//     },
+//     {
+//         eng: 'r/l',
+//         kor: 'ㄹ',
+//         audio: 'assets/audio/r.mp3'
+//     },
+//     {
+//         eng: 'm',
+//         kor: 'ㅁ',
+//         audio: 'assets/audio/m.mp3'
+//     },
+//     {
+//         eng: 'bp',
+//         kor: 'ㅂ',
+//         audio: 'assets/audio/b.mp3'
+//     },
+//     {
+//         eng: 's',
+//         kor: 'ㅅ',
+//         audio: 'assets/audio/s.mp3'
+//     },
+//     {
+//         eng: '-/ng',
+//         kor: 'ㅇ',
+//         audio: 'assets/audio/ng.mp3'
+//     },
+//     {
+//         eng: 'j',
+//         kor: 'ㅈ',
+//         audio: 'assets/audio/j.mp3'
+//     },
+//     {
+//         eng: 'ch',
+//         kor: 'ㅊ',
+//         audio: 'assets/audio/ch.mp3'
+//     },
+//     {
+//         eng: 'k',
+//         kor: 'ㅋ',
+//         audio: 'assets/audio/k.mp3'
+//     },
+//     {
+//         eng: 't',
+//         kor: 'ㅌ',
+//         audio: 'assets/audio/t.mp3'
+//     },
+//     {
+//         eng: 'p',
+//         kor: 'ㅍ',
+//         audio: 'assets/audio/p.mp3'
+//     },
+//     {
+//         eng: 'h',
+//         kor: 'ㅎ',
+//         audio: 'assets/audio/h.mp3'
+//     },
+// ];
 
-let doubleConsonants = [{
-        eng: 'kk',
-        kor: 'ㄲ',
-        audio: 'assets/audio/kk.mp3'
-    },
-    {
-        eng: 'tt',
-        kor: 'ㄸ',
-        audio: 'assets/audio/tt.mp3'
-    },
-    {
-        eng: 'pp',
-        kor: 'ㅃ',
-        audio: 'assets/audio/pp.mp3'
-    },
-    {
-        eng: 'ss',
-        kor: 'ㅆ',
-        audio: 'assets/audio/ss.mp3'
-    },
-    {
-        eng: 'jj',
-        kor: 'ㅉ',
-        audio: 'assets/audio/jj.mp3'
-    },
-];
+// let doubleConsonants = [{
+//         eng: 'kk',
+//         kor: 'ㄲ',
+//         audio: 'assets/audio/kk.mp3'
+//     },
+//     {
+//         eng: 'tt',
+//         kor: 'ㄸ',
+//         audio: 'assets/audio/tt.mp3'
+//     },
+//     {
+//         eng: 'pp',
+//         kor: 'ㅃ',
+//         audio: 'assets/audio/pp.mp3'
+//     },
+//     {
+//         eng: 'ss',
+//         kor: 'ㅆ',
+//         audio: 'assets/audio/ss.mp3'
+//     },
+//     {
+//         eng: 'jj',
+//         kor: 'ㅉ',
+//         audio: 'assets/audio/jj.mp3'
+//     },
+// ];
 
-document.addEventListener('DOMContentLoaded', function()
-{
-    
+document.addEventListener('DOMContentLoaded', function () {
+
+    let lettersData = fetchData();
+    if (!lettersData) {
+      console.log("Oh No");
+    } 
+  });
+  
+  async function fetchData() {
+    try {
+      const response = await fetch('assets/scripts/json/flashcard-data.json');
+      console.log(response);
+      if (!response.ok) {
+        throw new Error('HTTP error! status: ${response.status}');
+      }
+      const data = await response.json();
+      console.log(data);
+      console.log(data.letters);
+      if (data.letters) {
+        lettersData = data.letters;
+      } else {
+        throw new Error('Invalid data format');
+      }
+  
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 //Add consonants to page
 
+let consonants = letters.filter(letter => letter.type === "consonants");
 let korCons = consonants.map(consonant => consonant.kor);
 let allCons = korCons.length;
 
@@ -273,6 +300,7 @@ consContainer.appendChild(consHeader);
 
 // Add double consonants to page
 
+let doubleConsonants = letters.filter(letter => letter.type === "doubleConsonants");
 let doubCons = doubleConsonants.map(doubleCon => doubleCon.kor);
 let allDoubCons = doubCons.length;
 
@@ -329,6 +357,7 @@ for (let i = 0; i < dcAudio; i++) {
 
 // Add vowels to page
 
+let vowels = letters.filter(letter => letter.type === "vowels");
 let korVowels = vowels.map(vowel => vowel.kor);
 let allVowels = korVowels.length;
 
@@ -391,6 +420,7 @@ for (let i = 0; i < vowelAudio; i++) {
 
 //Add compound vowels to page
 
+let compoundVowels = letters.filter(letter => letter.type === "compoundVowels");
 let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
 let allCompoundVowels = korCompoundVowels.length;
 
@@ -495,5 +525,4 @@ function flip() {
     this.classList.toggle("flipcard");
 }
 
-})
 
