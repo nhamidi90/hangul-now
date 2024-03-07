@@ -231,6 +231,8 @@ a {
     transform-style: preserve-3d;
     transition: all 0.8s ease;
     margin-bottom: 10px;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .card-front, .card-back {
@@ -243,7 +245,6 @@ a {
     text-align: center;
     background-size: 150px, 200px;
     border: 4px solid;
-    backface-visibility: hidden;
     border-radius: 10px;
     box-shadow: 5px 8px 5px #abaeb4;
 }
