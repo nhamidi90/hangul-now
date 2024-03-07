@@ -1,189 +1,36 @@
-// const data = [{
-//     eng: 'a',
-//     kor: 'ㅏ'
-//   },
-//   {
-//     eng: 'ya',
-//     kor: 'ㅑ'
-//   },
-//   {
-//     eng: 'eo',
-//     kor: 'ㅓ'
-//   },
-//   {
-//     eng: 'yeo',
-//     kor: 'ㅕ'
-//   },
-//   {
-//     eng: 'o',
-//     kor: 'ㅗ'
-//   },
-//   {
-//     eng: 'yo',
-//     kor: 'ㅛ'
-//   },
-//   {
-//     eng: 'u',
-//     kor: 'ㅜ'
-//   },
-//   {
-//     eng: 'yoo',
-//     kor: 'ㅠ'
-//   },
-//   {
-//     eng: 'eu',
-//     kor: 'ㅡ'
-//   },
-//   {
 
-//     eng: 'i',
-//     kor: 'ㅣ'
-//   },
-//   {
-//     eng: 'gk',
-//     kor: 'ㄱ'
-//   },
-//   {
-//     eng: 'n',
-//     kor: 'ㄴ'
-//   },
-//   {
-//     eng: 'dt',
-//     kor: 'ㄷ'
-//   },
-//   {
-//     eng: 'r/l',
-//     kor: 'ㄹ'
-//   },
-//   {
-//     eng: 'm',
-//     kor: 'ㅁ'
-//   },
-//   {
-//     eng: 'bp',
-//     kor: 'ㅂ'
-//   },
-//   {
-//     eng: 's',
-//     kor: 'ㅅ'
-//   },
-//   {
-//     eng: '-/ng',
-//     kor: 'ㅇ'
-//   },
-//   {
-//     eng: 'j',
-//     kor: 'ㅈ'
-//   },
-//   {
-//     eng: 'ch',
-//     kor: 'ㅊ'
-//   },
-//   {
-//     eng: 'k',
-//     kor: 'ㅋ'
-//   },
-//   {
-//     eng: 't',
-//     kor: 'ㅌ'
-//   },
-//   {
-//     eng: 'p',
-//     kor: 'ㅍ'
-//   },
-//   {
-//     eng: 'h',
-//     kor: 'ㅎ'
-//   },
-//   {
-//     eng: 'kk',
-//     kor: 'ㄲ',
-//   },
-//   {
-//     eng: 'tt',
-//     kor: 'ㄸ',
-//   },
-//   {
-//     eng: 'pp',
-//     kor: 'ㅃ',
-//   },
-//   {
-//     eng: 'ss',
-//     kor: 'ㅆ',
-//   },
-//   {
-//     eng: 'jj',
-//     kor: 'ㅉ',
-//   },
-//   {
-//     eng: 'ae',
-//     kor: 'ㅐ',
-//   },
-//   {
-//     eng: 'yae',
-//     kor: 'ㅒ',
-//   },
-//   {
-//     eng: 'e',
-//     kor: 'ㅔ',
-//   },
-//   {
-//     eng: 'ye',
-//     kor: 'ㅖ',
-//   },
-//   {
-//     eng: 'wa',
-//     kor: 'ㅘ',
-//   },
-//   {
-//     eng: 'oe',
-//     kor: 'ㅚ',
-//   },
-//   {
-//     eng: 'wae',
-//     kor: 'ㅙ',
-//   },
-//   {
-//     eng: 'wo',
-//     kor: 'ㅝ',
-//   },
-//   {
-//     eng: 'we',
-//     kor: 'ㅞ',
-//   },
-//   {
-//     eng: 'wi',
-//     kor: 'ㅟ',
-//   },
-//   {
-//     eng: 'ui',
-//     kor: 'ㅢ',
-//   },
-// ];
+document.addEventListener('DOMContentLoaded', function () {
+
+  let finalWordsList = fetchData();
+  if (!finalWordsList) {
+    console.log("Oh No");
+  } else {
+  }
+  document.getElementById("skip-question").addEventListener("click", skipQuestion);
+  document.getElementById("start").addEventListener("click", next);
+});
 
 async function fetchData() {
   try {
     const response = await fetch('assets/scripts/json/game-data.json');
+    console.log(response);
     if (!response.ok) {
       throw new Error('HTTP error! status: ${response.status}');
     }
     const data = await response.json();
-    if (Array.isArray(data.data)) {
-      data = data.data;
+    console.log(data);
+    console.log(data.words);
+    if (data.words) {
+      finalWordsList = data.words;
+      randomValueGenerator(finalWordsList);
     } else {
       throw new Error('Invalid data format');
     }
 
   } catch (error) {
     console.log(error);
-    return []
   }
 }
-
-fetchData();
-
-document.getElementById("skip-question").addEventListener("click", skipQuestion);
-document.getElementById("start").addEventListener("click", next);
 
 // Game
 let game = {
@@ -212,27 +59,27 @@ const point3 = document.getElementById('point3');
  */
 
 const randomValueGenerator = () => {
-  randomIndex1 = Math.floor(Math.random() * data.length);
-  randomIndex2 = Math.floor(Math.random() * data.length);
-  randomIndex3 = Math.floor(Math.random() * data.length);
+  randomIndex1 = Math.floor(Math.random() * finalWordsList.length);
+  randomIndex2 = Math.floor(Math.random() * finalWordsList.length);
+  randomIndex3 = Math.floor(Math.random() * finalWordsList.length);
 
-  let korean1 = data[randomIndex1].kor;
+  let korean1 = finalWordsList[randomIndex1].kor;
   obj1.innerHTML = korean1;
   obj1.setAttribute("value", korean1);
 
-  let korean2 = data[randomIndex2].kor;
+  let korean2 = finalWordsList[randomIndex2].kor;
   obj2.innerHTML = korean2;
   obj2.setAttribute("value", korean2);
 
-  let korean3 = data[randomIndex3].kor;
+  let korean3 = finalWordsList[randomIndex3].kor;
   obj3.innerHTML = korean3;
   obj3.setAttribute("value", korean3);
 
   //shuffle english letters
   let unshuffled = [
-    data[randomIndex1].eng,
-    data[randomIndex2].eng,
-    data[randomIndex3].eng
+    finalWordsList[randomIndex1].eng,
+    finalWordsList[randomIndex2].eng,
+    finalWordsList[randomIndex3].eng
   ];
 
   let shuffled = unshuffled
@@ -250,8 +97,6 @@ const randomValueGenerator = () => {
   point2.innerHTML = shuffled[1];
   point3.innerHTML = shuffled[2];
 };
-
-randomValueGenerator();
 
 // Drag and drop functions
 const draggable = document.querySelectorAll(".draggable");
@@ -299,7 +144,7 @@ function drop(event) {
   let sourceValue = source.getAttribute("value");
   let targetValue = event.target.innerText;
 
-  let matchedData = data.find(obj => {
+  let matchedData = finalWordsList.find(obj => {
     return obj.kor === sourceValue && obj.eng === targetValue;
   });
 
