@@ -95,6 +95,10 @@ The website passed all tests using the [W3C CSS validator](https://jigsaw.w3.org
 
 ![Validator results for CSS](documentation/validators/css-validator.png)
 
+There were 2 warnings:
+
+![Validator warnings for CSS](documentation/validators/css-validator-warnings.png)
+
 ### Javascript
 
 The results for javascript validation using the official [JSHint](https://jshint.com/) validator is as follows:
