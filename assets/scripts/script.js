@@ -1,3 +1,7 @@
+/**
+ * Wait for DOM to load
+ */
+
 document.addEventListener('DOMContentLoaded', function () {
 
     let lettersData = fetchData();
@@ -5,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("Oh No");
     }
 });
+
+
+/**
+ * Fetch json data
+ */
 
 async function fetchData() {
     try {
@@ -315,5 +324,13 @@ function generateCards() {
 
     function flip() {
         this.classList.toggle("flipcard");
+
+        setTimeout(() => {
+            this.parentNode.addEventListener("click", flipBack, {once : true});
+        }, 1000)
+    }
+
+    function flipBack() {
+        this.firstElementChild.classList.toggle('flipcard')
     }
 }
