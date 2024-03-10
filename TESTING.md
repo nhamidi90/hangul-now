@@ -127,4 +127,4 @@ There are two unused variables listed. However they are called upon in game.html
 
 - For the game page there was a problem of responsiveness while on smaller devices. Looking on [Stack overflow](https://stackoverflow.com/questions/14272420/webpage-starts-zoomed-in-on-mobile-devices) gave me the metadata to add to the head tag which I thought solved the problem but I realised I needed to create media queries and change the game play area sizes.
 
-- I had problems testing with Jest. documentation can be found[here](JEST-TEST.md)
+- I had problems testing with Jest. documentation can be found [here](JEST-TEST.md)
