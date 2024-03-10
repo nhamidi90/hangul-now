@@ -127,4 +127,6 @@ There are two unused variables listed. However they are called upon in game.html
 
 - For the game page there was a problem of responsiveness while on smaller devices. Looking on [Stack overflow](https://stackoverflow.com/questions/14272420/webpage-starts-zoomed-in-on-mobile-devices) gave me the metadata to add to the head tag which I thought solved the problem but I realised I needed to create media queries and change the game play area sizes.
 
+- After I had moved my dictionaries to an external json file, the flip function for the flashcards would only flip once but not back again as the focus of the click has changed after it had been flipped once. I had to add a set timeout to the flip function  and add another function to target the child of the parent element that is being clicked.
+
 - I had problems testing with Jest. documentation can be found [here](JEST-TEST.md)
