@@ -327,10 +327,10 @@ function generateCards() {
 
         setTimeout(() => {
             this.parentNode.addEventListener("click", flipBack, {once : true});
-        }, 1000)
+        }, 1000);
     }
 
     function flipBack() {
-        this.firstElementChild.classList.toggle('flipcard')
+        this.firstElementChild.classList.toggle('flipcard');
     }
 }
