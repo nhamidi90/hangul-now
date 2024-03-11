@@ -105,14 +105,13 @@ function generateCards() {
     let doubCons = doubleConsonants.map(doubleCon => doubleCon.kor);
     let allDoubCons = doubCons.length;
 
-    let dcContainer = document.getElementById("dc-container");
     let conOuterBox2 = document.getElementsByClassName("outer-box2");
     let dcCardCont = document.getElementsByClassName("card2");
 
     for (let i = 0; i < allDoubCons; i++) {
         let conOuterBox2 = document.createElement('div');
         conOuterBox2.classList.add("outer-box2");
-        dcContainer.appendChild(conOuterBox2);
+        consContainer.appendChild(conOuterBox2);
         let card2 = document.createElement('div');
         card2.classList.add("card2");
         conOuterBox2.appendChild(card2);
@@ -225,14 +224,13 @@ function generateCards() {
     let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
     let allCompoundVowels = korCompoundVowels.length;
 
-    let cvContainer = document.getElementById("cv-container");
     let outerBox2 = document.getElementsByClassName("outer-box2");
     let compoundCard = document.getElementsByClassName("card2");
 
     for (let i = 0; i < allCompoundVowels; i++) {
         let outerBox2 = document.createElement('div');
         outerBox2.classList.add("outer-box2");
-        cvContainer.appendChild(outerBox2);
+        vowelsContainer.appendChild(outerBox2);
         let card2 = document.createElement('div');
         card2.classList.add("card2");
         outerBox2.appendChild(card2);
@@ -287,9 +285,7 @@ function generateCards() {
 
     function conClick() {
         vowelsContainer.classList.add("nodisplay");
-        cvContainer.classList.add("nodisplay");
         consContainer.classList.remove("nodisplay");
-        dcContainer.classList.remove("nodisplay");
     }
 
     let vowelButton = document.getElementById('vowels-button');
@@ -301,9 +297,7 @@ function generateCards() {
 
     function vowelClick() {
         vowelsContainer.classList.remove("nodisplay");
-        cvContainer.classList.remove("nodisplay");
         consContainer.classList.add("nodisplay");
-        dcContainer.classList.add("nodisplay");
     }
 
     /**
