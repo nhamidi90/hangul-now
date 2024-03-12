@@ -81,7 +81,7 @@ Here is the website tested on different devices:
 
 ### HTML
 
-The website passed all tests using the [W3C HTML Validator](https://validator.w3.org/nu/) tool
+The website was tested using the [W3C HTML Validator](https://validator.w3.org/nu/) tool
 
 ![Validator results for index page](documentation/validators/htmlvalidator-index.png)
 
@@ -106,8 +106,6 @@ The results for javascript validation using the official [JSHint](https://jshint
 ![Validator results for script.js](documentation/validators/js-script.png)
 
 ![Validator results for game.js](documentation/validators/js-game.png)
-
-There are two unused variables listed. However they are called upon in game.html
 
 ## Lighthouse report
 
