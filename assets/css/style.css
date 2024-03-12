@@ -204,7 +204,7 @@ a {
 
 /* ---------------- Letters */
 
-#vowels-container, #cv-container, #consonants-container, #dc-container {
+#vowels-container, #consonants-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
