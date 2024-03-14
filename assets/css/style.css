@@ -61,8 +61,6 @@ main {
 }
 
 /* ----------------Header */
-
-
 .header-container {
     display: flex;
     flex-direction: row;
@@ -117,7 +115,6 @@ main {
 }
 
 /* ----------------Index Page */
-
 .index-image {
     width: 100%;
     display: flex;
@@ -131,7 +128,6 @@ main {
     margin-top: 0;
     max-width: 80rem;
 }
-
 
 .index-left {
     font-size: 50px;
@@ -203,7 +199,6 @@ a {
 }
 
 /* ---------------- Letters */
-
 #vowels-container, #consonants-container {
     display: flex;
     flex-wrap: wrap;
@@ -283,7 +278,6 @@ a {
 }
 
 /* ---------------- Game */
-
 #game {
     font-size: 30px;
     margin-top: 20px;
