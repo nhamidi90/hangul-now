@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let finalWordsList = fetchData();
   if (!finalWordsList) {
-    console.log("Oh No");
+    console.log("Sorry, the data cannot be retieved");
   } else {
   }
   document.getElementById("skip-question").addEventListener("click", skipQuestion);
@@ -14,13 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
 async function fetchData() {
   try {
     const response = await fetch('assets/scripts/json/game-data.json');
-    console.log(response);
     if (!response.ok) {
       throw new Error('HTTP error! status: ${response.status}');
     }
     const data = await response.json();
-    console.log(data);
-    console.log(data.words);
     if (data.words) {
       finalWordsList = data.words;
       randomValueGenerator(finalWordsList);
