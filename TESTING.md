@@ -2,7 +2,7 @@
 
 ## Jest
 
-* Documentation on  jest testing can be found [here](JEST-TEST.md)
+* Documentation on jest testing can be found [here](JEST-TEST.md)
 
 ## Compatibility and responsiveness
 
@@ -93,6 +93,8 @@ The website was tested using the [W3C HTML Validator](https://validator.w3.org/n
 
 ![Validator results for game page](documentation/validators/htmlvalidator-game.png)
 
+* I am aware of these warnings however it was my decision to keep the structure as is
+
 ### CSS
 
 The website passed all tests using the [W3C CSS validator](https://jigsaw.w3.org/css-validator/) tool
@@ -110,6 +112,8 @@ The results for javascript validation using the official [JSHint](https://jshint
 ![Validator results for script.js](documentation/validators/js-script.png)
 
 ![Validator results for game.js](documentation/validators/js-game.png)
+
+* I know from the warnings that this is not the best practice however since this is my first project it will serve as a learning curve so that I can do it according to best practices next time
 
 ## Lighthouse report
 
