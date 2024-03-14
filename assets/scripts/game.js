@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -32,14 +33,15 @@ async function fetchData() {
   }
 }
 
-// Game
+// Initial game data
+
 let game = {
   questionNumber: 1,
   score: 0,
   totalNumberOfRounds: 10,
 };
 
-//generate random letters and append to boxes
+// Generate random letters and append to boxes
 
 let randomIndex1;
 let randomIndex2;
@@ -57,11 +59,12 @@ const point3 = document.getElementById('point3');
  * This will generate three random objects from the data, find the korean letters and append them to the draggable elements. 
  * The english equivelants are shuffled and appended to the drop elements.
  */
-
 const randomValueGenerator = () => {
   randomIndex1 = Math.floor(Math.random() * finalWordsList.length);
   randomIndex2 = Math.floor(Math.random() * finalWordsList.length);
   randomIndex3 = Math.floor(Math.random() * finalWordsList.length);
+
+  // Append letters to drag elements
 
   let korean1 = finalWordsList[randomIndex1].kor;
   obj1.innerHTML = korean1;
@@ -75,7 +78,8 @@ const randomValueGenerator = () => {
   obj3.innerHTML = korean3;
   obj3.setAttribute("value", korean3);
 
-  //shuffle english letters
+  // Shuffle english letters
+
   let unshuffled = [
     finalWordsList[randomIndex1].eng,
     finalWordsList[randomIndex2].eng,
@@ -92,13 +96,15 @@ const randomValueGenerator = () => {
       value
     }) => value);
 
-  //append shuffled letters to boxes
+  // Append shuffled letters to drop elements
+
   point1.innerHTML = shuffled[0];
   point2.innerHTML = shuffled[1];
   point3.innerHTML = shuffled[2];
 };
 
 // Drag and drop functions
+
 const draggable = document.querySelectorAll(".draggable");
 const droppable = document.querySelectorAll(".droppable");
 
@@ -135,7 +141,6 @@ function dragOver(event) {
  * Styling is changed depending on the action
  * For each correct answer, score will be increased by 1
  */
-
 function drop(event) {
   event.preventDefault();
   event.target.classList.remove("drop-hover");
@@ -158,9 +163,8 @@ function drop(event) {
   }
 }
 
-// Next button
-
 /**
+ * When next button is clicked
  * This will go to the next round of questions
  * If there are unsanswered questions, a modal will pop up
  * This will confirm whether the user wants to skip or not
@@ -168,7 +172,6 @@ function drop(event) {
  * styling is reset
  * If the user has reached the end of all questions, they will be directed to the results page
  */
-
 function next() {
 
   if (document.querySelectorAll('.droppable.dropped').length !== 3) {
@@ -203,12 +206,12 @@ function next() {
 }
 
 /**
- * If user skips question they will go to the next round of questions
+ * When skip question is clicked in modal
+ * They will go to the next round of questions
  * The round number will increase by 1
  * Styling is reset
  * If the user has reached the end of all questions, they will be directed to the results page
  */
-
 function skipQuestion() {
   game.questionNumber++;
   document.getElementById('current-game').innerText = game.questionNumber;
