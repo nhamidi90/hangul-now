@@ -34,9 +34,69 @@ async function fetchData() {
     }
 }
 
-//Add consonants to page
+/**
+ * Consonants audio
+ * When you click it, it will play audio for consonants
+ */
+function playConsonant(audioToPlay) {
+    const audio = new Audio(audioToPlay);
+    audio.play();
+}
 
+/**
+ * Double consonants audio
+ * When you click it, it will play audio for double consonants
+ */
+function playDoubCon(audioToPlay) {
+    const audio = new Audio(audioToPlay);
+    audio.play();
+}
+
+/**
+ * Vowels audio
+ * When you click it, it will play audio for vowels
+ */
+function playVowels(audioToPlay) {
+    const audio = new Audio(audioToPlay);
+    audio.play();
+}
+
+/**
+ * Compound vowels audio
+ * When you click it, it will play audio for compound vowels
+ */
+function playCV(audioToPlay) {
+    const audio = new Audio(audioToPlay);
+    audio.play();
+}
+
+/**
+ * flip function
+ * When clicked, it will flip to the english side
+ * A timed event listener is added to the parent container
+ */
+function flip() {
+    this.classList.toggle("flipcard");
+     setTimeout(() => {
+        this.parentNode.addEventListener("click", flipBack, {once : true});
+    }, 1000);
+}
+
+/**
+ * flip back function
+ * When clicked, it will flip back to the korean side
+ */
+function flipBack() {
+    this.firstElementChild.classList.toggle('flipcard');
+}
+
+/**
+ * This will display the data onto the page
+ */
 function generateCards() {
+    
+    // Add consonants to page
+    
     let consonants = lettersData.filter(letter => letter.type === "consonants");
     let korCons = consonants.map(consonant => consonant.kor);
     let allCons = korCons.length;
@@ -68,18 +128,10 @@ function generateCards() {
         conCardContainer[i].appendChild(cardBack);
     }
 
+    // Create consonants audio button and append to each consonant flashcard
+
     let consonantsAudio = consonants.map(consonant => consonant.audio);
     let conAudio = consonantsAudio.length;
-
-    /**
-     * Consonants audio
-     * This creates a button for all consonants and appends it under each card
-     * When you click it, it will play audio
-     */
-    function playConsonant(audioToPlay) {
-        const audio = new Audio(audioToPlay);
-        audio.play();
-    }
 
     for (let i = 0; i < conAudio; i++) {
         const play = new Image();
@@ -129,18 +181,10 @@ function generateCards() {
         dcCardCont[i].appendChild(cardBack);
     }
 
+    // Create double consonants audio button and append to each double consonant flashcard
+
     let doubConAudio = doubleConsonants.map(doubCon => doubCon.audio);
     let dcAudio = doubConAudio.length;
-
-    /**
-     * Double consonants audio
-     * This creates a button for all double consonants and appends it under each card
-     * When you click it, it will play audio
-     */
-    function playDoubCon(audioToPlay) {
-        const audio = new Audio(audioToPlay);
-        audio.play();
-    }
 
     for (let i = 0; i < dcAudio; i++) {
         const play = new Image();
@@ -185,24 +229,16 @@ function generateCards() {
         cardContainer[i].appendChild(cardBack);
     }
 
-    // Vowels header
+    // Create vowels header
 
     let vowelsHeader = document.createElement('h2');
     vowelsHeader.innerHTML = "Compound Vowels";
     vowelsContainer.appendChild(vowelsHeader);
 
+    // Create vowels audio button and append to each vowel flashcard
+
     let vowelsAudio = vowels.map(vowel => vowel.audio);
     let vowelAudio = vowelsAudio.length;
-
-    /**
-     * Vowels audio
-     * This creates a button for all vowels and appends it under each card
-     * When you click it, it will play audio
-     */
-    function playVowels(audioToPlay) {
-        const audio = new Audio(audioToPlay);
-        audio.play();
-    }
 
     for (let i = 0; i < vowelAudio; i++) {
         const play = new Image();
@@ -214,7 +250,7 @@ function generateCards() {
         });
     }
 
-    //Add compound vowels to page
+    // Add compound vowels to page
 
     let compoundVowels = lettersData.filter(letter => letter.type === "compoundVowels");
     let korCompoundVowels = compoundVowels.map(compoundVowel => compoundVowel.kor);
@@ -246,18 +282,10 @@ function generateCards() {
         compoundCard[i].appendChild(cardBack);
     }
 
+     //Create compound vowels audio button and append to each compound vowel flashcard
+
     let CVAudio = compoundVowels.map(compoundVowel => compoundVowel.audio);
     let CVowelsAudio = CVAudio.length;
-
-    /**
-     * Compound vowels audio
-     * This creates a button for all consonants and appends it under each card
-     * When you click it, it will play audio
-     */
-    function playCV(audioToPlay) {
-        const audio = new Audio(audioToPlay);
-        audio.play();
-    }
 
     for (let i = 0; i < CVowelsAudio; i++) {
         const play = new Image();
@@ -269,7 +297,7 @@ function generateCards() {
         });
     }
 
-    //button functions
+    // Button functions
 
     let conButton = document.getElementById('consonants-button');
     conButton.addEventListener('click', conClick);
@@ -293,6 +321,8 @@ function generateCards() {
         consContainer.classList.add("nodisplay");
     }
 
+    // Attach event listeners to flashcards
+
     let card = document.getElementsByClassName('card');
     for (let i = 0; i < card.length; i++) {
         card[i].addEventListener('click', flip);
@@ -303,24 +333,4 @@ function generateCards() {
         card2[i].addEventListener('click', flip);
     }
 
-    /**
-     * flip function
-     * When clicked, it will flip to the english side
-     * A timed event listener is added to the parent container
-     */
-    function flip() {
-        this.classList.toggle("flipcard");
-
-        setTimeout(() => {
-            this.parentNode.addEventListener("click", flipBack, {once : true});
-        }, 1000);
-    }
-
-    /**
-     * flip back function
-     * When clicked, it will flip back to the korean side
-     */
-    function flipBack() {
-        this.firstElementChild.classList.toggle('flipcard');
-    }
 }
