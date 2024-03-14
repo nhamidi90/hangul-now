@@ -79,12 +79,20 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
 ## Technologies Used
 
+### Code
+
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) was used to make the main content of the site
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) was used to add styling
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) was used to add interactivity
+
+### Libraries
+
 * [JQuery](https://jquery.com/) was used to call upon a modal using javascript
-* [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) was used to align items on the page
 * [Bootstrap](https://getbootstrap.com/) was used for creating modals and breakpoints
+
+### Other tools
+
+* [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) was used to align items on the page
 * [Visual Studio Code](https://code.visualstudio.com/) was the programme used to write and edit code
 * [Balsamiq](https://balsamiq.com/) was used to make wireframes
 * [Git](https://git-scm.com/) was used for source control management
@@ -137,13 +145,15 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 
 ## Known issues
 
-- Some characters are not correctly expressed through the audio and do sound similar to other letters. This is due to using text to speech
+- I am aware that the pronunciation of some letters are not proper since I used a speech synthesizer which is not ideal for the Korean language
 
 ## Future improvements
 
 * I would like to add a section for users to learn about how to form syllabic blocks used in korean writing so they can learn how to read words
 * I would then add explanations on how positioning of some letters affects pronunciation
 * I would like to use audio spoken by native speakers as opposed to text to speech as it is more helpful in learning
+* I would like to improve my javascript code to include the best practices
+* I would also in the future like to improve my code by shortening it and being less verbose
 
 ## Credits
 
@@ -179,8 +189,3 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 * Code Institute - This website would not have been possible without their tutorials and walkthroughs. Tutors and slack community gave me help when I had difficulty
 * Julie Konovalova - My mentor who has given me a lot of guidance throughout this project
 * Falah Hamidi - My brother who helped me with the logic of matching correct drag and drop elements
-
-## Mistakes
-
-* Mistakes were made while commiting messages. I wrote 'Inital commit' more than once as I didn't realise I had already done that
-* While trying to solve the issues on the game page I have written that the bug was fixed thinking it was and have had to do/undo some code while testing the site on the responsive viewer to see if it worked
