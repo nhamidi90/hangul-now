@@ -154,6 +154,7 @@ The live link can be found [here](https://nhamidi90.github.io/hangul-now/)
 * I would like to use audio spoken by native speakers as opposed to text to speech as it is more helpful in learning
 * I would like to improve my javascript code to include the best practices
 * I would also in the future like to improve my code by shortening it and being less verbose
+* It was my decision to start from a desktop first perspective which is not a recommended practice but in the future I will look to doing a mobile-first approach
 
 ## Credits
 
