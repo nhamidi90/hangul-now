@@ -1,5 +1,9 @@
 # TESTING
 
+## Jest
+
+* Documentation on  jest testing can be found [here](JEST-TEST.md)
+
 ## Compatibility and responsiveness
 
 * The website was tested on three browsers to determine correct appearance, responsiveness and to ensure it works well
@@ -128,3 +132,8 @@ The results for javascript validation using the official [JSHint](https://jshint
 - After I had moved my dictionaries to an external json file, the flip function for the flashcards would only flip once but not back again as the focus of the click has changed after it had been flipped once. I had to add a set timeout to the flip function  and add another function to target the child of the parent element that is being clicked.
 
 - I had problems testing with Jest. documentation can be found [here](JEST-TEST.md)
+
+## Mistakes
+
+* Mistakes were made while commiting messages. I wrote 'Inital commit' more than once as I didn't realise I had already done that
+* While trying to solve the issues on the game page I have written that the bug was fixed thinking it was and have had to do/undo some code while testing the site on the responsive viewer to see if it worked
