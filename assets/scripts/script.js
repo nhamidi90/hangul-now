@@ -1,12 +1,13 @@
+/* jshint esversion: 8 */
+
 /**
  * Wait for DOM to load
  */
-
 document.addEventListener('DOMContentLoaded', function () {
 
     let lettersData = fetchData();
     if (!lettersData) {
-        console.log("Oh No");
+        console.log("Sorry, the data is unavailable");
     }
 });
 
@@ -14,11 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
 /**
  * Fetch json data
  */
-
 async function fetchData() {
     try {
         const response = await fetch('assets/scripts/json/flashcard-data.json');
-        console.log(response);
         if (!response.ok) {
             throw new Error('HTTP error! status: ${response.status}');
         }
@@ -69,15 +68,14 @@ function generateCards() {
         conCardContainer[i].appendChild(cardBack);
     }
 
+    let consonantsAudio = consonants.map(consonant => consonant.audio);
+    let conAudio = consonantsAudio.length;
+
     /**
      * Consonants audio
      * This creates a button for all consonants and appends it under each card
      * When you click it, it will play audio
      */
-
-    let consonantsAudio = consonants.map(consonant => consonant.audio);
-    let conAudio = consonantsAudio.length;
-
     function playConsonant(audioToPlay) {
         const audio = new Audio(audioToPlay);
         audio.play();
@@ -131,15 +129,14 @@ function generateCards() {
         dcCardCont[i].appendChild(cardBack);
     }
 
+    let doubConAudio = doubleConsonants.map(doubCon => doubCon.audio);
+    let dcAudio = doubConAudio.length;
+
     /**
      * Double consonants audio
      * This creates a button for all double consonants and appends it under each card
      * When you click it, it will play audio
      */
-
-    let doubConAudio = doubleConsonants.map(doubCon => doubCon.audio);
-    let dcAudio = doubConAudio.length;
-
     function playDoubCon(audioToPlay) {
         const audio = new Audio(audioToPlay);
         audio.play();
@@ -194,15 +191,14 @@ function generateCards() {
     vowelsHeader.innerHTML = "Compound Vowels";
     vowelsContainer.appendChild(vowelsHeader);
 
+    let vowelsAudio = vowels.map(vowel => vowel.audio);
+    let vowelAudio = vowelsAudio.length;
+
     /**
      * Vowels audio
      * This creates a button for all vowels and appends it under each card
      * When you click it, it will play audio
      */
-
-    let vowelsAudio = vowels.map(vowel => vowel.audio);
-    let vowelAudio = vowelsAudio.length;
-
     function playVowels(audioToPlay) {
         const audio = new Audio(audioToPlay);
         audio.play();
@@ -250,15 +246,14 @@ function generateCards() {
         compoundCard[i].appendChild(cardBack);
     }
 
+    let CVAudio = compoundVowels.map(compoundVowel => compoundVowel.audio);
+    let CVowelsAudio = CVAudio.length;
+
     /**
      * Compound vowels audio
      * This creates a button for all consonants and appends it under each card
      * When you click it, it will play audio
      */
-
-    let CVAudio = compoundVowels.map(compoundVowel => compoundVowel.audio);
-    let CVowelsAudio = CVAudio.length;
-
     function playCV(audioToPlay) {
         const audio = new Audio(audioToPlay);
         audio.play();
@@ -282,7 +277,6 @@ function generateCards() {
     /**
      * This will hide the vowels container and show consonants container
      */
-
     function conClick() {
         vowelsContainer.classList.add("nodisplay");
         consContainer.classList.remove("nodisplay");
@@ -294,17 +288,10 @@ function generateCards() {
     /**
      * This will hide the consonants container and show vowels container
      */
-
     function vowelClick() {
         vowelsContainer.classList.remove("nodisplay");
         consContainer.classList.add("nodisplay");
     }
-
-    /**
-     * flipcard function
-     * This adds event listener to each flashcard
-     * When clicked, it will toggle between english and korean
-     */
 
     let card = document.getElementsByClassName('card');
     for (let i = 0; i < card.length; i++) {
@@ -316,6 +303,11 @@ function generateCards() {
         card2[i].addEventListener('click', flip);
     }
 
+    /**
+     * flip function
+     * When clicked, it will flip to the english side
+     * A timed event listener is added to the parent container
+     */
     function flip() {
         this.classList.toggle("flipcard");
 
@@ -324,6 +316,10 @@ function generateCards() {
         }, 1000);
     }
 
+    /**
+     * flip back function
+     * When clicked, it will flip back to the korean side
+     */
     function flipBack() {
         this.firstElementChild.classList.toggle('flipcard');
     }
